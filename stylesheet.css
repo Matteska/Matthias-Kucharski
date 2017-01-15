@@ -10,7 +10,6 @@ h1 {
   margin-bottom: 5%;
 }
 
-
 p {
   color: #fff;
   font-size: 18px;
@@ -25,8 +24,6 @@ a {
 a:hover {
   text-decoration: underline;
 }
-
-
 
 .introduction {
   position: fixed;
