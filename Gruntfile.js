@@ -4,7 +4,7 @@ module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
     clean: {
-      css: ["css/**"],
+      css: ["css/*"],
     },
 
     sass: {
@@ -19,7 +19,7 @@ module.exports = function(grunt) {
     },
 
     watch: {
-      files: ['**/*.scss'],
+      files: ['scss/*.scss'],
       tasks: ['default']
       }
   });
