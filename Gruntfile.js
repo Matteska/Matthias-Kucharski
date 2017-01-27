@@ -16,9 +16,14 @@ module.exports = function(grunt) {
                 'css/stylesheet.css': 'sass/stylesheet.scss'
             }
         }
-    }
-  });
+    },
 
+    watch: {
+      files: ['**/*.scss'],
+      tasks: ['default']
+      }
+  });
+  grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-sass');
 
