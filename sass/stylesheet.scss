@@ -28,8 +28,7 @@ $smartphone: 320px;
 .wrapper {
   margin-left: 10px;
   margin-right: 10px;
-  height: 100vh;
-  background: #cff;
+
 
   @media only screen and (min-width: $small-screen){
       margin-left: 30px;
@@ -48,8 +47,6 @@ $smartphone: 320px;
       margin-right: 150px;
       background: #c00;
   }
-
-
 }
 
 header {
