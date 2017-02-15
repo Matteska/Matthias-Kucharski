@@ -12,16 +12,25 @@
         <div class="logo">
           <p id="name">Matthias Kucharski</p>
           <p id="jobtitle">UX/UI & Frontend Designer</p>
-      </div>
+        </div>
         <nav>
           <ul>
             <li><a href="#">Info</a></li>
             <li><a href="#">Arbeiten</a></li>
             <li><a href="#">Kontakt</a></li>
           </ul>
-      </nav>
-</header>
+          <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </nav>
+    </header>
     <div class="wrapper">
     </div>
+    <script>
+      document.getElementsByClassName("hamburger")[0].addEventListener("click", function(){
+        this.classList.toggle("close");
+})</script>
   </body>
 </html>
