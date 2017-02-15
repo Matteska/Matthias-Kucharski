@@ -8,29 +8,35 @@
     <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
   </head>
   <body>
-    <header>
-        <div class="logo">
-          <p id="name">Matthias Kucharski</p>
-          <p id="jobtitle">UX/UI & Frontend Designer</p>
-        </div>
-        <nav>
-          <ul>
-            <li><a href="#">Info</a></li>
-            <li><a href="#">Arbeiten</a></li>
-            <li><a href="#">Kontakt</a></li>
-          </ul>
-          <div class="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-        </nav>
-    </header>
     <div class="wrapper">
     </div>
-    <script>
-      document.getElementsByClassName("hamburger")[0].addEventListener("click", function(){
-        this.classList.toggle("close");
-})</script>
+      <header>
+          <div class="logo">
+            <p id="name">Matthias Kucharski</p>
+            <p id="jobtitle">UX/UI & Frontend Designer</p>
+          </div>
+          <nav>
+            <ul class="navigation-items">
+              <li><a href="#">Info</a></li>
+              <li><a href="#">Arbeiten</a></li>
+              <li><a href="#">Kontakt</a></li>
+            </ul>
+            <div class="hamburger">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </nav>
+      </header>
+        <script>
+          document.getElementsByClassName("hamburger")[0].addEventListener("click", function(){
+            this.classList.toggle("close");
+            document.getElementsByClassName("navigation-items")[0].classList.toggle("hamburger-overlay");
+          });
+          window.addEventListener('resize', function(){
+            document.getElementsByClassName("navigation-items")[0].classList.remove("hamburger-overlay");
+            document.getElementsByClassName("hamburger")[0].classList.remove("close");
+          });
+        </script>
   </body>
 </html>

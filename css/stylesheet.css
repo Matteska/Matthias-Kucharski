@@ -48,6 +48,10 @@ header {
     height: 30px;
     padding: 25px;
     display: flex;
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    right: 0;
     flex-direction: column;
     justify-content: space-between;
     background-color: #000; }
@@ -69,20 +73,35 @@ header {
         transform: rotate(-45deg); }
       header nav .hamburger.close span:nth-child(3) {
         opacity: 0; }
-  header nav ul {
-    display: none; }
+  header nav ul.navigation-items {
+    opacity: 0;
+    visibility: hidden;
+    transition: all ease 420ms;
+    position: absolute; }
     @media only screen and (min-width: 1200px) {
-      header nav ul {
+      header nav ul.navigation-items {
         display: flex;
+        position: relative;
         flex-direction: row;
         justify-content: flex-end;
         list-style-type: none;
-        margin-right: 10px; } }
-  header nav li {
-    display: none; }
-    @media only screen and (min-width: 1200px) {
-      header nav li {
-        display: inline-block; } }
+        margin-right: 10px;
+        opacity: 1;
+        visibility: visible; } }
+    header nav ul.navigation-items.hamburger-overlay {
+      display: flex;
+      opacity: 1;
+      visibility: visible;
+      flex-direction: column;
+      justify-content: center;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      z-index: 1; }
+  @media only screen and (min-width: 1200px) {
+    header nav li {
+      display: inline-block; } }
   header nav a {
     padding: 14px 20px;
     display: block;
@@ -93,11 +112,5 @@ header {
     @media only screen and (min-width: 1200px) {
       header nav a {
         font-size: 1.125rem; } }
-  header a:hover {
-    background-color: #fff;
-    color: #000; }
-  header a:active {
-    background-color: #fff;
-    color: #000; }
 
 /*# sourceMappingURL=stylesheet.css.map */

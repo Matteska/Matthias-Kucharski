@@ -102,6 +102,10 @@ nav {
     height: 30px;
     padding: 25px;
     display: flex;
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    right:0;
     flex-direction: column;
     justify-content: space-between;
     background-color: #000;
@@ -138,21 +142,39 @@ nav {
     }
   }
 
-  ul {
-    display: none;
+  ul.navigation-items {
+    opacity:0;
+    visibility: hidden;
+    transition: all ease 420ms;
+    position: absolute;
 
     @include for-desktop-up {
       display: flex;
+      position: relative;
       flex-direction: row;
       justify-content: flex-end;
       list-style-type: none;
       margin-right: 10px;
+      opacity: 1;
+      visibility: visible;
+    }
+
+    &.hamburger-overlay {
+      display: flex;
+      opacity:1;
+      visibility: visible;
+      flex-direction: column;
+      justify-content: center;
+
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      z-index: 1;
     }
   }
 
   li {
-    display: none;
-
     @include for-desktop-up {
       display: inline-block;
     }
@@ -172,13 +194,7 @@ nav {
   }
 }
 
-  a:hover {
-    background-color: $secondary-color;
-    color: $primary-color;
-  }
 
-  a:active {
-    background-color: $secondary-color;
-    color: $primary-color;
-  }
+
+
 }
