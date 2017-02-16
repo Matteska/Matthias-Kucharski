@@ -5,10 +5,20 @@
   padding: 0;
 }
 
-//colors//
+//main colors//
 $primary-color: #000;
 $secondary-color: #fff;
 $accent-color: #808080;
+
+//illustration colors//
+$grey: #4D4D4D;
+$bright-lilac: 999999;
+$lilac: #A1A5D3;
+$rose: #fc7c8b;
+$red: #ff3948;
+$grassgreen: #22b573;
+
+
 
 //font sizes 18px, 24px & 30px//
 $headline: 1.5rem;
@@ -43,19 +53,121 @@ $icon-size: 1.875rem;
 .wrapper {
   margin-left: 10px;
   margin-right: 10px;
-  background-color: red;
+
+  @include for-tablet-portrait-up {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+
+  @include for-big-desktop-up {
+    margin-left: 200px;
+    margin-right: 200px;
+  }
+
+  .index-illustration {
+
+    @include for-desktop-up {
+      margin: 0 auto;
+      width: 50vh;
+      height: 50vh;
+    }
 
     @include for-tablet-portrait-up {
-      background-color: #a8ff00;
-      margin-left: 50px;
-      margin-right: 50px;
+      margin: 0 auto;
+      width: 50vh;
+      height: 50vh;
     }
 
-    @include for-big-desktop-up {
-      margin-left: 200px;
-      margin-right: 200px;
+
+
+    .st0 {
+      fill:none;
+      stroke:$lilac;
+      stroke-width:3;
+      stroke-linecap:round;
+      stroke-linejoin:round;
+      stroke-miterlimit:10;
+    }
+
+    .st1 {
+      fill:none;
+      stroke:$grey;
+      stroke-width:3;
+      stroke-miterlimit:10;
+    }
+
+    .st2 {
+      fill:$grey;
+    }
+
+    .st3 {
+      fill:none;
+      stroke:$grey;
+      stroke-width:3;
+      stroke-linecap:round;
+      stroke-miterlimit:10;
+    }
+
+    .st4 {
+      fill:none;
+      stroke:$bright-lilac;
+      stroke-width:2;
+      stroke-linecap:round;
+      stroke-linejoin:round;
+      stroke-miterlimit:10;
+    }
+
+    .st5 {
+      fill:none;
+      stroke:$rose;
+      stroke-width:3;
+      stroke-linecap:round;
+      stroke-linejoin:round;
+      stroke-miterlimit:10;
+      stroke-dasharray:0,18,25,12,35,0;
+    }
+
+    .st6 {
+      fill:none;
+      stroke:$lilac;
+      stroke-width:2;
+      stroke-linecap:round;
+      stroke-linejoin:round;
+      stroke-miterlimit:10;
+    }
+    .st7 {
+      fill:$grassgreen;
+    }
+
+    .st8 {
+      fill:none;
+      stroke:$rose;
+      stroke-width:2;
+      stroke-linecap:round;
+      stroke-linejoin:round;
+      stroke-miterlimit:10;
+    }
+
+    .st9 {
+      fill:none;
+      stroke:$lilac;
+      stroke-width:2;
+      stroke-miterlimit:10;
+    }
+
+    .st10 {
+      fill:$lilac;
+    }
+
+    .st11 {
+      fill:$red;
+    }
+
+    .st12 {
+      fill:$rose;
     }
   }
+}
 
 header {
   margin-left: 0;
@@ -65,17 +177,14 @@ header {
   align-items: center;
   justify-content: space-between;
 
-    @include for-desktop-up {
-      margin-left: 200px;
-      margin-right: 200px;
-    }
+  @include for-desktop-up {
+    margin-left: 200px;
+    margin-right: 200px;
+  }
 
-
-
-.logo {
-  padding: 14px 20px;
-  color: $secondary-color;
-
+  .logo {
+    padding: 14px 20px;
+    color: $secondary-color;
 
     #name {
       font-size: 18px;
@@ -90,111 +199,125 @@ header {
       font-size: 18px;
 
       @include for-phone-only {
+        font-size: 14px;
+      }
+    }
+  }
+
+  nav {
+
+    .hamburger {
+      width: 30px;
+      height: 30px;
+      padding: 25px;
+      display: flex;
+      z-index: 10;
+      position: absolute;
+      top: 0;
+      right:0;
+      flex-direction: column;
+      justify-content: space-between;
+      background-color: #000;
+
+      &:hover {
+        span {
+          background-color: $accent-color;
+        }
+      }
+
+      @include for-desktop-up {
         display: none;
       }
-    }
-  }
-
-nav {
-
-  .hamburger {
-    width: 30px;
-    height: 30px;
-    padding: 25px;
-    display: flex;
-    z-index: 10;
-    position: absolute;
-    top: 0;
-    right:0;
-    flex-direction: column;
-    justify-content: space-between;
-    background-color: #000;
-    @include for-desktop-up {
-      display: none;
-    }
-
-
-    span {
-      background-color: #fff;
-      display: flex;
-      transform-origin: center;
-      transition: all ease 240ms;
-      width: 100%;
-      height: 5px;
-    }
-
-    &.close {
-      justify-content: center;
 
       span {
-        &:nth-child(1) {
-          transform: rotate(45deg) translateY(4px) translateX(3px)
+        background-color: #fff;
+        display: flex;
+        transform-origin: center;
+        transition: all ease 240ms;
+        width: 100%;
+        height: 5px;
+      }
+
+      &.close {
+        justify-content: center;
+
+        span {
+
+          &:nth-child(1) {
+            transform: rotate(45deg) translateY(4px) translateX(3px)
+          }
+
+          &:nth-child(2) {
+            transform: rotate(-45deg)
+          }
+
+          &:nth-child(3) {
+            opacity: 0;
+          }
+        }
+      }
+    }
+
+    ul.navigation-items {
+      opacity:0;
+      visibility: hidden;
+      display: none;
+      transition: all ease 420ms;
+      position: absolute;
+
+      @include for-desktop-up {
+        display: flex;
+        position: relative;
+        flex-direction: row;
+        justify-content: flex-end;
+        list-style-type: none;
+        margin-right: 10px;
+        opacity: 1;
+        visibility: visible;
+      }
+
+      &.hamburger-overlay {
+        display: flex;
+        opacity:1;
+        visibility: visible;
+        flex-direction: column;
+        justify-content: center;
+
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        z-index: 1;
+      }
+
+
+      li {
+        @include for-desktop-up {
+          display: inline-block;
+        }
+      }
+
+      a {
+        padding: 14px 20px;
+        display: block;
+        text-align: center;
+        text-decoration: none;
+        color: $secondary-color;
+        font-size: $icon-size;
+        &:hover {
+          color: $accent-color;
+          transition: all ease 420ms;
         }
 
-        &:nth-child(2) {
-          transform: rotate(-45deg)
-        }
+        @include for-desktop-up {
+          font-size: $copy;
 
-         &:nth-child(3) {
-          opacity: 0;
+          &:hover {
+            background-color: #fff;
+            color: #000;
+          }
         }
       }
     }
   }
-
-  ul.navigation-items {
-    opacity:0;
-    visibility: hidden;
-    transition: all ease 420ms;
-    position: absolute;
-
-    @include for-desktop-up {
-      display: flex;
-      position: relative;
-      flex-direction: row;
-      justify-content: flex-end;
-      list-style-type: none;
-      margin-right: 10px;
-      opacity: 1;
-      visibility: visible;
-    }
-
-    &.hamburger-overlay {
-      display: flex;
-      opacity:1;
-      visibility: visible;
-      flex-direction: column;
-      justify-content: center;
-
-      top: 0;
-      right: 0;
-      left: 0;
-      bottom: 0;
-      z-index: 1;
-    }
-  }
-
-  li {
-    @include for-desktop-up {
-      display: inline-block;
-    }
-  }
-
-  a {
-    padding: 14px 20px;
-    display: block;
-    text-align: center;
-    text-decoration: none;
-    color: $secondary-color;
-    font-size: $icon-size;
-
-    @include for-desktop-up {
-      font-size: $copy;
-    }
-  }
-}
-
-
-
-
 }

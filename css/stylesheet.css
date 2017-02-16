@@ -6,17 +6,87 @@
 
 .wrapper {
   margin-left: 10px;
-  margin-right: 10px;
-  background-color: red; }
+  margin-right: 10px; }
   @media only screen and (min-width: 600px) {
     .wrapper {
-      background-color: #a8ff00;
       margin-left: 50px;
       margin-right: 50px; } }
   @media only screen and (min-width: 1800px) {
     .wrapper {
       margin-left: 200px;
       margin-right: 200px; } }
+  @media only screen and (min-width: 1200px) {
+    .wrapper .index-illustration {
+      margin: 0 auto;
+      width: 50vh;
+      height: 50vh; } }
+  @media only screen and (min-width: 600px) {
+    .wrapper .index-illustration {
+      margin: 0 auto;
+      width: 50vh;
+      height: 50vh; } }
+  .wrapper .index-illustration .st0 {
+    fill: none;
+    stroke: #A1A5D3;
+    stroke-width: 3;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10; }
+  .wrapper .index-illustration .st1 {
+    fill: none;
+    stroke: #4D4D4D;
+    stroke-width: 3;
+    stroke-miterlimit: 10; }
+  .wrapper .index-illustration .st2 {
+    fill: #4D4D4D; }
+  .wrapper .index-illustration .st3 {
+    fill: none;
+    stroke: #4D4D4D;
+    stroke-width: 3;
+    stroke-linecap: round;
+    stroke-miterlimit: 10; }
+  .wrapper .index-illustration .st4 {
+    fill: none;
+    stroke: 999999;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10; }
+  .wrapper .index-illustration .st5 {
+    fill: none;
+    stroke: #fc7c8b;
+    stroke-width: 3;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+    stroke-dasharray: 0,18,25,12,35,0; }
+  .wrapper .index-illustration .st6 {
+    fill: none;
+    stroke: #A1A5D3;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10; }
+  .wrapper .index-illustration .st7 {
+    fill: #22b573; }
+  .wrapper .index-illustration .st8 {
+    fill: none;
+    stroke: #fc7c8b;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10; }
+  .wrapper .index-illustration .st9 {
+    fill: none;
+    stroke: #A1A5D3;
+    stroke-width: 2;
+    stroke-miterlimit: 10; }
+  .wrapper .index-illustration .st10 {
+    fill: #A1A5D3; }
+  .wrapper .index-illustration .st11 {
+    fill: #ff3948; }
+  .wrapper .index-illustration .st12 {
+    fill: #fc7c8b; }
 
 header {
   margin-left: 0;
@@ -42,7 +112,7 @@ header {
       font-size: 18px; }
       @media only screen and (max-width: 599px) {
         header .logo #jobtitle {
-          display: none; } }
+          font-size: 14px; } }
   header nav .hamburger {
     width: 30px;
     height: 30px;
@@ -55,6 +125,8 @@ header {
     flex-direction: column;
     justify-content: space-between;
     background-color: #000; }
+    header nav .hamburger:hover span {
+      background-color: #808080; }
     @media only screen and (min-width: 1200px) {
       header nav .hamburger {
         display: none; } }
@@ -76,6 +148,7 @@ header {
   header nav ul.navigation-items {
     opacity: 0;
     visibility: hidden;
+    display: none;
     transition: all ease 420ms;
     position: absolute; }
     @media only screen and (min-width: 1200px) {
@@ -99,18 +172,24 @@ header {
       left: 0;
       bottom: 0;
       z-index: 1; }
-  @media only screen and (min-width: 1200px) {
-    header nav li {
-      display: inline-block; } }
-  header nav a {
-    padding: 14px 20px;
-    display: block;
-    text-align: center;
-    text-decoration: none;
-    color: #fff;
-    font-size: 1.875rem; }
     @media only screen and (min-width: 1200px) {
-      header nav a {
-        font-size: 1.125rem; } }
+      header nav ul.navigation-items li {
+        display: inline-block; } }
+    header nav ul.navigation-items a {
+      padding: 14px 20px;
+      display: block;
+      text-align: center;
+      text-decoration: none;
+      color: #fff;
+      font-size: 1.875rem; }
+      header nav ul.navigation-items a:hover {
+        color: #808080;
+        transition: all ease 420ms; }
+      @media only screen and (min-width: 1200px) {
+        header nav ul.navigation-items a {
+          font-size: 1.125rem; }
+          header nav ul.navigation-items a:hover {
+            background-color: #fff;
+            color: #000; } }
 
 /*# sourceMappingURL=stylesheet.css.map */
