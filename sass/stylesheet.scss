@@ -23,7 +23,6 @@ $grassgreen: #22b573;
 //font sizes 18px, 24px & 30px//
 $headline: 1.5rem;
 $copy: 1.125rem;
-$icon-size: 1.875rem;
 
 //media query sizes//
 @mixin for-phone-only {
@@ -292,6 +291,7 @@ header {
 
 
       li {
+
         @include for-desktop-up {
           display: inline-block;
         }
@@ -303,7 +303,7 @@ header {
         text-align: center;
         text-decoration: none;
         color: $secondary-color;
-        font-size: $icon-size;
+
         &:hover {
           color: $accent-color;
           transition: all ease 420ms;

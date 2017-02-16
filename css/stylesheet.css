@@ -180,8 +180,7 @@ header {
       display: block;
       text-align: center;
       text-decoration: none;
-      color: #fff;
-      font-size: 1.875rem; }
+      color: #fff; }
       header nav ul.navigation-items a:hover {
         color: #808080;
         transition: all ease 420ms; }
