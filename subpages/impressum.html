@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Matthias Kucharski - Kontakt</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no,maximum-scale=1,shrink-to-fit=no">
+  <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="../css/stylesheet.css">
+</head>
+<body>
+  <header>
+    <a href="../index.html" class="logo">
+      <p id="name">Matthias Kucharski</p>
+      <p id="jobtitle">UX/UI & Frontend Designer</p>
+    </a>
+
+    <nav>
+      <ul class="navigation-items">
+        <li><a href="info.html" title="Informationen über Matthias Kucharski">Info</a></li>
+        <li><a href="arbeiten.html" title="Arbeiten von Matthias Kucharski">Arbeiten</a></li>
+        <li><a class="current" href="#" title="Kontaktmöglichkeiten">Kontakt</a></li>
+      </ul>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+
+  </header>
+  <div class="wrapper">
+    
+    <div class="vertical-template">
+    <h1>Impressum</h1>
+    <h2>Angaben gemäß § 5 TMG:</h2>
+    <p>Matthias KuKucharski<br />
+      Venloer Straße 504<br />
+      50825 Köln
+    </p>
+    <h2>Kontakt:</h2>
+    <table><tr>
+      <td>Telefon:</td>
+      <td></td></tr>
+      <tr><td>E-Mail:</td>
+        <td>matthias.kucharski@gmail.com</td>
+      </tr></table>
+      <p> </p>
+      <p>Quelle: <em><a href="https://www.e-recht24.de">https://www.e-recht24.de</a></em></p>
+    </div>
+  </div>
+    <footer><a href="#">Impressum<a/><footer>
+      <script>
+      document.getElementsByClassName("hamburger")[0].addEventListener("click", function(){
+        this.classList.toggle("close");
+        document.getElementsByClassName("navigation-items")[0].classList.toggle("hamburger-overlay");
+      });
+      window.addEventListener('resize', function(){
+        document.getElementsByClassName("navigation-items")[0].classList.remove("hamburger-overlay");
+        document.getElementsByClassName("hamburger")[0].classList.remove("close");
+      });
+      </script>
+    </body>
+    </html>
