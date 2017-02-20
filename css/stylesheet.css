@@ -6,13 +6,8 @@
 
 body {
   font-size: 1.125rem;
-  color: #fff; }
-  body p {
-    font-size: 1.125rem;
-    line-height: 140%; }
-    @media only screen and (min-width: 1800px) {
-      body p {
-        font-size: 1.25rem; } }
+  color: #fff;
+  line-height: 130%; }
   body header {
     margin-left: 0;
     margin-right: 0;
@@ -115,8 +110,8 @@ body {
           body header nav ul.navigation-items a {
             font-size: 1.125rem; }
             body header nav ul.navigation-items a.current:link, body header nav ul.navigation-items a.current:visited, body header nav ul.navigation-items a.current:hover {
-              border-bottom: solid 2px;
-              color: #fff; }
+              background-color: #fff;
+              color: #000; }
             body header nav ul.navigation-items a:hover {
               color: #808080; } }
   body .wrapper {
@@ -274,5 +269,16 @@ body {
         body .wrapper footer a:hover {
           color: #808080;
           transition: all ease 420ms; }
+    body .wrapper .impressum {
+      padding: 80px 20px;
+      width: 50%; }
+      body .wrapper .impressum.paragraph {
+        padding-top: 50px; }
+      body .wrapper .impressum p {
+        margin-bottom: 20px; }
+      body .wrapper .impressum h2 {
+        margin: 20px 0; }
+      body .wrapper .impressum h3 {
+        margin-bottom: 10px; }
 
 /*# sourceMappingURL=stylesheet.css.map */

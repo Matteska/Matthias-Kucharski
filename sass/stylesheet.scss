@@ -49,18 +49,9 @@ $mobile-nav: 1.75rem; //28px
 body {
   font-size: $copy;
   color: $secondary-color;
+  line-height: 130%;
 
 
-  p {
-    font-size: $copy;
-    line-height: 140%;
-
-    @include for-big-desktop-up {
-      font-size: $copy-bigscreen;
-    }
-
-
-  }
 
   header {
     margin-left: 0;
@@ -210,8 +201,8 @@ body {
             font-size: $copy;
 
             &.current:link, &.current:visited, &.current:hover  {
-              border-bottom: solid 2px;
-              color: $secondary-color;
+              background-color: $secondary-color;
+              color: $primary-color;
             }
 
             &:hover {
@@ -447,6 +438,26 @@ body {
           color: $accent-color;
           transition: all ease 420ms;
         }
+      }
+    }
+    .impressum {
+      padding: 80px 20px;
+      width: 50%;
+
+      &.paragraph {
+        padding-top: 50px;
+      }
+      
+      p {
+        margin-bottom: 20px;
+      }
+
+      h2 {
+        margin: 20px 0;
+      }
+
+      h3 {
+        margin-bottom: 10px;
       }
     }
   }
