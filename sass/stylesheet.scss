@@ -18,10 +18,12 @@ $rose: #fc7c8b;
 $red: #ff3948;
 $grassgreen: #22b573;
 
-//font sizes 18px, 24px & 28px//
-$copy: 1.125rem;
-$headline: 1.5rem;
-$mobile-nav: 1.75rem;
+//font sizes//
+$micro-copy: 0.75rem; //12px
+$copy: 1.125rem; //18px
+$copy-bigscreen: 1.25rem; //20px
+$headline: 1.5rem; //24px
+$mobile-nav: 1.75rem; //28px
 
 //media query sizes//
 @mixin for-phone-only {
@@ -47,8 +49,18 @@ $mobile-nav: 1.75rem;
 body {
   font-size: $copy;
   color: $secondary-color;
-  line-height: 140%;
 
+
+  p {
+    font-size: $copy;
+    line-height: 140%;
+
+    @include for-big-desktop-up {
+      font-size: $copy-bigscreen;
+    }
+
+
+  }
 
   header {
     margin-left: 0;
@@ -198,8 +210,8 @@ body {
             font-size: $copy;
 
             &.current:link, &.current:visited, &.current:hover  {
-              background-color: $secondary-color;
-              color: $primary-color;
+              border-bottom: solid 2px;
+              color: $secondary-color;
             }
 
             &:hover {
@@ -214,8 +226,7 @@ body {
   .wrapper {
     margin-left: 10px;
     margin-right: 10px;
-    display: flex;
-    flex-direction: column;
+
 
     @include for-tablet-portrait-up {
       margin-left: 50px;
@@ -225,7 +236,7 @@ body {
     @include for-desktop-up {
       margin-left: 200px;
       margin-right: 200px;
-      flex-direction: row;
+
     }
 
     .index-illustration {
@@ -352,8 +363,10 @@ body {
           padding: 0 20px;
         }
 
-        &.left {
-          align-self: center;
+        &.right {
+          @include for-phone-only {
+            margin-bottom: 20px;
+          }
         }
 
         p {
@@ -370,55 +383,71 @@ body {
       }
     }
 
-    .vertical-template {
+    .skills-section {
       display: flex;
       flex-direction: column;
-      padding-top: 80px;
-      padding-left: 20px;
-    }
-  }
+      justify-content: center;
+      padding-top: 40px;
+      padding-bottom: 40px;
+      color: $accent-color;
 
-  footer {
-    display: flex;
-<<<<<<< HEAD
-    flex-direction: column;
-=======
-    align-items: flex-end;
-    flex-direction: row;
->>>>>>> c7eb5c47f94e1adb85dd486a5f2cc53fd522cfd1
-    justify-content: space-between;
-    margin: 0 10px;
-    padding: 14px 0;
-    font-size: $copy;
-    color: $secondary-color;
-
-<<<<<<< HEAD
-    @include for-desktop-up {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-
-    }
-
-
-
-    .box-style {
-
-      padding: 0 20px;
-
-      @include for-desktop-up {
-        width: 50%;
+      &.programming {
+        padding-bottom: 80px;
       }
 
-=======
-    a {
-      text-decoration: none;
-      padding: 0 20px;
->>>>>>> c7eb5c47f94e1adb85dd486a5f2cc53fd522cfd1
+      @include for-desktop-up {
+        flex-direction: row;
+        justify-content: space-between;
+
+      }
+
+      .skill-box {
+        padding-bottom: 80px;
+        justify-content: center;
+        text-align: center;
+
+        .software {
+          border: 2px solid red;
+        }
+
+        @include for-desktop-up {
+          width: 25%;
+          padding: 0 20px;
+        }
+
+        img {
+          width: 80px;
+          padding-bottom: 10px;
+
+          @include for-desktop-up {
+            width: 50px;
+          }
+        }
+      }
     }
 
-    @include for-desktop-up {
-      margin: 0 200px;
+    footer {
+      justify-content: space-between;
+      padding: 30px 10px;
+
+      @include for-tablet-landscape-up {
+        padding: 20px 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+      }
+
+      a {
+        text-decoration: none;
+        font-size: $copy;
+        color: $secondary-color;
+
+        &:hover {
+          color: $accent-color;
+          transition: all ease 420ms;
+        }
+      }
     }
   }
 }

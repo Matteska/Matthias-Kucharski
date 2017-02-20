@@ -6,8 +6,13 @@
 
 body {
   font-size: 1.125rem;
-  color: #fff;
-  line-height: 140%; }
+  color: #fff; }
+  body p {
+    font-size: 1.125rem;
+    line-height: 140%; }
+    @media only screen and (min-width: 1800px) {
+      body p {
+        font-size: 1.25rem; } }
   body header {
     margin-left: 0;
     margin-right: 0;
@@ -110,15 +115,13 @@ body {
           body header nav ul.navigation-items a {
             font-size: 1.125rem; }
             body header nav ul.navigation-items a.current:link, body header nav ul.navigation-items a.current:visited, body header nav ul.navigation-items a.current:hover {
-              background-color: #fff;
-              color: #000; }
+              border-bottom: solid 2px;
+              color: #fff; }
             body header nav ul.navigation-items a:hover {
               color: #808080; } }
   body .wrapper {
     margin-left: 10px;
-    margin-right: 10px;
-    display: flex;
-    flex-direction: column; }
+    margin-right: 10px; }
     @media only screen and (min-width: 600px) {
       body .wrapper {
         margin-left: 50px;
@@ -126,8 +129,7 @@ body {
     @media only screen and (min-width: 1200px) {
       body .wrapper {
         margin-left: 200px;
-        margin-right: 200px;
-        flex-direction: row; } }
+        margin-right: 200px; } }
     @media only screen and (min-width: 1200px) {
       body .wrapper .index-illustration {
         margin: 0 auto;
@@ -218,62 +220,59 @@ body {
           body .wrapper .info-introduction .box-style {
             width: 50%;
             padding: 0 20px; } }
-        body .wrapper .info-introduction .box-style.left {
-          align-self: center; }
+        @media only screen and (max-width: 599px) {
+          body .wrapper .info-introduction .box-style.right {
+            margin-bottom: 20px; } }
         body .wrapper .info-introduction .box-style p {
           margin-bottom: 20px; }
         @media only screen and (max-width: 599px) {
           body .wrapper .info-introduction .box-style img {
             width: 100%;
             height: auto; } }
-    body .wrapper .vertical-template {
+    body .wrapper .skills-section {
       display: flex;
       flex-direction: column;
-      padding-top: 80px;
-      padding-left: 20px; }
-  body footer {
-    display: flex;
-<<<<<<< HEAD
-    flex-direction: column;
-=======
-    align-items: flex-end;
-    flex-direction: row;
->>>>>>> c7eb5c47f94e1adb85dd486a5f2cc53fd522cfd1
-    justify-content: space-between;
-    margin: 0 10px;
-    padding: 14px 0;
-    font-size: 1.125rem;
-<<<<<<< HEAD
-    line-height: 140%; }
-    @media only screen and (min-width: 1200px) {
-      .wrapper .content {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between; } }
-    .wrapper .content .box-style {
-      padding: 0 20px; }
+      justify-content: center;
+      padding-top: 40px;
+      padding-bottom: 40px;
+      color: #808080; }
+      body .wrapper .skills-section.programming {
+        padding-bottom: 80px; }
       @media only screen and (min-width: 1200px) {
-        .wrapper .content .box-style {
-          width: 50%; } }
-
-footer {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin: 0 10px;
-  font-size: 1.125rem;
-  color: #fff; }
-  @media only screen and (min-width: 1200px) {
-    footer {
-      margin: 0 200px; } }
-=======
-    color: #fff; }
-    body footer a {
-      text-decoration: none;
-      padding: 0 20px; }
-    @media only screen and (min-width: 1200px) {
-      body footer {
-        margin: 0 200px; } }
->>>>>>> c7eb5c47f94e1adb85dd486a5f2cc53fd522cfd1
+        body .wrapper .skills-section {
+          flex-direction: row;
+          justify-content: space-between; } }
+      body .wrapper .skills-section .skill-box {
+        padding-bottom: 80px;
+        justify-content: center;
+        text-align: center; }
+        body .wrapper .skills-section .skill-box .software {
+          border: 2px solid red; }
+        @media only screen and (min-width: 1200px) {
+          body .wrapper .skills-section .skill-box {
+            width: 25%;
+            padding: 0 20px; } }
+        body .wrapper .skills-section .skill-box img {
+          width: 80px;
+          padding-bottom: 10px; }
+          @media only screen and (min-width: 1200px) {
+            body .wrapper .skills-section .skill-box img {
+              width: 50px; } }
+    body .wrapper footer {
+      justify-content: space-between;
+      padding: 30px 10px; }
+      @media only screen and (min-width: 900px) {
+        body .wrapper footer {
+          padding: 20px 20px;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between; } }
+      body .wrapper footer a {
+        text-decoration: none;
+        font-size: 1.125rem;
+        color: #fff; }
+        body .wrapper footer a:hover {
+          color: #808080;
+          transition: all ease 420ms; }
 
 /*# sourceMappingURL=stylesheet.css.map */
