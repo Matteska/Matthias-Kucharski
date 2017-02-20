@@ -195,14 +195,22 @@ header {
     fill: #fc7c8b; }
   .wrapper .content {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     padding-top: 80px;
     color: #fff;
     font-size: 1.125rem;
     line-height: 140%; }
+    @media only screen and (min-width: 1200px) {
+      .wrapper .content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between; } }
     .wrapper .content .box-style {
-      width: 50%;
       padding: 0 20px; }
+      @media only screen and (min-width: 1200px) {
+        .wrapper .content .box-style {
+          width: 50%; } }
 
 footer {
   display: flex;

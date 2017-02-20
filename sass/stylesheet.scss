@@ -322,15 +322,29 @@ header {
 
   .content {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     padding-top: 80px;
     color: $secondary-color;
     font-size: $copy;
     line-height: 140%;
 
+    @include for-desktop-up {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+    }
+
+
+
     .box-style {
-      width: 50%;
+
       padding: 0 20px;
+
+      @include for-desktop-up {
+        width: 50%;
+      }
 
     }
   }
