@@ -44,291 +44,355 @@ $mobile-nav: 1.75rem;
   @media only screen and (min-width: 1800px) { @content; }
 }
 
-header {
-  margin-left: 0;
-  margin-right: 0;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-
-  @include for-desktop-up {
-    margin-left: 200px;
-    margin-right: 200px;
-  }
-
-  a.logo {
-    padding: 14px 20px;
-    color: $secondary-color;
-    text-decoration: none;
+body {
+  font-size: $copy;
+  color: $secondary-color;
+  line-height: 140%;
 
 
-    #name {
-      font-size: 18px;
+  header {
+    margin-left: 0;
+    margin-right: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 
-      @include for-desktop-up {
-        font-size: 25px;
-      }
+    @include for-desktop-up {
+      margin-left: 200px;
+      margin-right: 200px;
     }
 
-    #jobtitle {
-      color: $accent-color;
-      font-size: 18px;
-
-      @include for-phone-only {
-        font-size: 14px;
-      }
-    }
-  }
-
-  nav {
-
-    .hamburger {
-      width: 30px;
-      height: 30px;
-      padding: 25px;
-      display: flex;
-      z-index: 10;
-      position: absolute;
-      top: 0;
-      right:0;
-      flex-direction: column;
-      justify-content: space-between;
-      background-color: #000;
-
-      &:hover {
-        span {
-          background-color: $accent-color;
-        }
-      }
-
-      @include for-desktop-up {
-        display: none;
-      }
-
-      span {
-        background-color: #fff;
-        display: flex;
-        transform-origin: center;
-        transition: all ease 240ms;
-        width: 100%;
-        height: 5px;
-      }
-
-      &.close {
-        justify-content: center;
-
-        span {
-
-          &:nth-child(1) {
-            transform: rotate(45deg) translateY(4px) translateX(3px)
-          }
-
-          &:nth-child(2) {
-            transform: rotate(-45deg)
-          }
-
-          &:nth-child(3) {
-            opacity: 0;
-          }
-        }
-      }
-    }
-
-    ul.navigation-items {
-      opacity:0;
-      visibility: hidden;
-      display: none;
-      transition: all ease 420ms;
-      position: absolute;
-
-      @include for-desktop-up {
-        display: flex;
-        position: relative;
-        flex-direction: row;
-        justify-content: flex-end;
-        list-style-type: none;
-        margin-right: 10px;
-        opacity: 1;
-        visibility: visible;
-      }
-
-      &.hamburger-overlay {
-        display: flex;
-        opacity:1;
-        visibility: visible;
-        flex-direction: column;
-        justify-content: center;
-
-        top: 0;
-        right: 0;
-        left: 0;
-        bottom: 0;
-        z-index: 1;
-      }
+    a.logo {
+      padding: 14px 20px;
+      color: $secondary-color;
+      text-decoration: none;
 
 
-      li {
+      #name {
+        font-size: 18px;
 
         @include for-desktop-up {
-          display: inline-block;
+          font-size: 25px;
         }
       }
 
-      a {
-        padding: 14px 20px;
-        display: block;
-        text-align: center;
-        text-decoration: none;
-        color: $secondary-color;
+      #jobtitle {
+        color: $accent-color;
+        font-size: 18px;
+
+        @include for-phone-only {
+          font-size: 14px;
+        }
+      }
+    }
+
+    nav {
+
+      .hamburger {
+        width: 30px;
+        height: 30px;
+        padding: 25px;
+        display: flex;
+        z-index: 10;
+        position: absolute;
+        top: 0;
+        right:0;
+        flex-direction: column;
+        justify-content: space-between;
+        background-color: #000;
 
         &:hover {
-          color: $accent-color;
-          transition: all ease 420ms;
+          span {
+            background-color: $accent-color;
+          }
         }
 
         @include for-desktop-up {
-          font-size: $copy;
+          display: none;
+        }
 
-          &.current:link, &.current:visited, &.current:hover  {
-            background-color: $secondary-color;
-            color: $primary-color;
+        span {
+          background-color: #fff;
+          display: flex;
+          transform-origin: center;
+          transition: all ease 240ms;
+          width: 100%;
+          height: 5px;
+        }
+
+        &.close {
+          justify-content: center;
+
+          span {
+
+            &:nth-child(1) {
+              transform: rotate(45deg) translateY(4px) translateX(3px)
+            }
+
+            &:nth-child(2) {
+              transform: rotate(-45deg)
+            }
+
+            &:nth-child(3) {
+              opacity: 0;
+            }
           }
+        }
+      }
+
+      ul.navigation-items {
+        opacity:0;
+        visibility: hidden;
+        display: none;
+        transition: all ease 420ms;
+        position: absolute;
+
+        @include for-desktop-up {
+          display: flex;
+          position: relative;
+          flex-direction: row;
+          justify-content: flex-end;
+          list-style-type: none;
+          margin-right: 10px;
+          opacity: 1;
+          visibility: visible;
+        }
+
+        &.hamburger-overlay {
+          display: flex;
+          opacity:1;
+          visibility: visible;
+          flex-direction: column;
+          justify-content: center;
+
+          top: 0;
+          right: 0;
+          left: 0;
+          bottom: 0;
+          z-index: 1;
+        }
+
+
+        li {
+
+          @include for-desktop-up {
+            display: inline-block;
+          }
+        }
+
+        a {
+          padding: 14px 20px;
+          display: block;
+          text-align: center;
+          text-decoration: none;
+          color: $secondary-color;
+          font-size: $mobile-nav;
 
           &:hover {
             color: $accent-color;
+            transition: all ease 420ms;
+          }
+
+          @include for-desktop-up {
+            font-size: $copy;
+
+            &.current:link, &.current:visited, &.current:hover  {
+              background-color: $secondary-color;
+              color: $primary-color;
+            }
+
+            &:hover {
+              color: $accent-color;
+            }
           }
         }
       }
     }
   }
-}
 
-.wrapper {
-  margin-left: 10px;
-  margin-right: 10px;
-
-  @include for-tablet-portrait-up {
-    margin-left: 50px;
-    margin-right: 50px;
-  }
-
-  @include for-desktop-up {
-    margin-left: 200px;
-    margin-right: 200px;
-  }
-
-  .index-illustration {
-
-    @include for-desktop-up {
-      margin: 0 auto;
-      width: 50vh;
-      height: 50vh;
-    }
-
-    @include for-tablet-portrait-up {
-      margin: 0 auto;
-      width: 50vh;
-      height: 50vh;
-    }
-
-    .st0 {
-      fill:none;
-      stroke:$lilac;
-      stroke-width:3;
-      stroke-linecap:round;
-      stroke-linejoin:round;
-      stroke-miterlimit:10;
-    }
-
-    .st1 {
-      fill:none;
-      stroke:$grey;
-      stroke-width:3;
-      stroke-miterlimit:10;
-    }
-
-    .st2 {
-      fill:$grey;
-    }
-
-    .st3 {
-      fill:none;
-      stroke:$grey;
-      stroke-width:3;
-      stroke-linecap:round;
-      stroke-miterlimit:10;
-    }
-
-    .st4 {
-      fill:none;
-      stroke:$bright-lilac;
-      stroke-width:2;
-      stroke-linecap:round;
-      stroke-linejoin:round;
-      stroke-miterlimit:10;
-    }
-
-    .st5 {
-      fill:none;
-      stroke:$rose;
-      stroke-width:3;
-      stroke-linecap:round;
-      stroke-linejoin:round;
-      stroke-miterlimit:10;
-      stroke-dasharray:0,18,25,12,35,0;
-    }
-
-    .st6 {
-      fill:none;
-      stroke:$lilac;
-      stroke-width:2;
-      stroke-linecap:round;
-      stroke-linejoin:round;
-      stroke-miterlimit:10;
-    }
-    .st7 {
-      fill:$grassgreen;
-    }
-
-    .st8 {
-      fill:none;
-      stroke:$rose;
-      stroke-width:2;
-      stroke-linecap:round;
-      stroke-linejoin:round;
-      stroke-miterlimit:10;
-    }
-
-    .st9 {
-      fill:none;
-      stroke:$lilac;
-      stroke-width:2;
-      stroke-miterlimit:10;
-    }
-
-    .st10 {
-      fill:$lilac;
-    }
-
-    .st11 {
-      fill:$red;
-    }
-
-    .st12 {
-      fill:$rose;
-    }
-  }
-
-  .content {
+  .wrapper {
+    margin-left: 10px;
+    margin-right: 10px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    padding-top: 80px;
-    color: $secondary-color;
-    font-size: $copy;
-    line-height: 140%;
 
+    @include for-tablet-portrait-up {
+      margin-left: 50px;
+      margin-right: 50px;
+    }
+
+    @include for-desktop-up {
+      margin-left: 200px;
+      margin-right: 200px;
+      flex-direction: row;
+    }
+
+    .index-illustration {
+
+      @include for-desktop-up {
+        margin: 0 auto;
+        width: 50vh;
+        height: 50vh;
+      }
+
+      @include for-tablet-portrait-up {
+        margin: 0 auto;
+        width: 50vh;
+        height: 50vh;
+      }
+
+      .st0 {
+        fill:none;
+        stroke:$lilac;
+        stroke-width:3;
+        stroke-linecap:round;
+        stroke-linejoin:round;
+        stroke-miterlimit:10;
+      }
+
+      .st1 {
+        fill:none;
+        stroke:$grey;
+        stroke-width:3;
+        stroke-miterlimit:10;
+      }
+
+      .st2 {
+        fill:$grey;
+      }
+
+      .st3 {
+        fill:none;
+        stroke:$grey;
+        stroke-width:3;
+        stroke-linecap:round;
+        stroke-miterlimit:10;
+      }
+
+      .st4 {
+        fill:none;
+        stroke:$bright-lilac;
+        stroke-width:2;
+        stroke-linecap:round;
+        stroke-linejoin:round;
+        stroke-miterlimit:10;
+      }
+
+      .st5 {
+        fill:none;
+        stroke:$rose;
+        stroke-width:3;
+        stroke-linecap:round;
+        stroke-linejoin:round;
+        stroke-miterlimit:10;
+        stroke-dasharray:0,18,25,12,35,0;
+      }
+
+      .st6 {
+        fill:none;
+        stroke:$lilac;
+        stroke-width:2;
+        stroke-linecap:round;
+        stroke-linejoin:round;
+        stroke-miterlimit:10;
+      }
+      .st7 {
+        fill:$grassgreen;
+      }
+
+      .st8 {
+        fill:none;
+        stroke:$rose;
+        stroke-width:2;
+        stroke-linecap:round;
+        stroke-linejoin:round;
+        stroke-miterlimit:10;
+      }
+
+      .st9 {
+        fill:none;
+        stroke:$lilac;
+        stroke-width:2;
+        stroke-miterlimit:10;
+      }
+
+      .st10 {
+        fill:$lilac;
+      }
+
+      .st11 {
+        fill:$red;
+      }
+
+      .st12 {
+        fill:$rose;
+      }
+    }
+
+    .info-introduction {
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: space-between;
+      padding-top: 80px;
+      padding-bottom: 80px;
+      color: $secondary-color;
+      font-size: $copy;
+      line-height: 130%;
+
+      @include for-desktop-up {
+        flex-direction: row;
+      }
+
+      .box-style {
+        padding: 0 10px;
+
+        @include for-desktop-up {
+          width: 50%;
+          padding: 0 20px;
+        }
+
+        &.left {
+          align-self: center;
+        }
+
+        p {
+          margin-bottom: 20px;
+        }
+
+        img {
+
+          @include for-phone-only {
+            width: 100%;
+            height: auto;
+          }
+        }
+      }
+    }
+
+    .vertical-template {
+      display: flex;
+      flex-direction: column;
+      padding-top: 80px;
+      padding-left: 20px;
+    }
+  }
+
+  footer {
+    display: flex;
+<<<<<<< HEAD
+    flex-direction: column;
+=======
+    align-items: flex-end;
+    flex-direction: row;
+>>>>>>> c7eb5c47f94e1adb85dd486a5f2cc53fd522cfd1
+    justify-content: space-between;
+    margin: 0 10px;
+    padding: 14px 0;
+    font-size: $copy;
+    color: $secondary-color;
+
+<<<<<<< HEAD
     @include for-desktop-up {
       display: flex;
       flex-direction: row;
@@ -346,20 +410,15 @@ header {
         width: 50%;
       }
 
+=======
+    a {
+      text-decoration: none;
+      padding: 0 20px;
+>>>>>>> c7eb5c47f94e1adb85dd486a5f2cc53fd522cfd1
+    }
+
+    @include for-desktop-up {
+      margin: 0 200px;
     }
   }
-}
-
-footer {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin: 0 10px;
-  font-size: $copy;
-  color: $secondary-color;
-
-  @include for-desktop-up {
-    margin: 0 200px;
-  }
-
 }
