@@ -14,7 +14,8 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between; }
+    justify-content: space-between;
+    background-color: #000; }
     @media only screen and (min-width: 1200px) {
       body header {
         margin-left: 200px;
@@ -110,8 +111,7 @@ body {
           body header nav ul.navigation-items a {
             font-size: 1.125rem; }
             body header nav ul.navigation-items a.current:link, body header nav ul.navigation-items a.current:visited, body header nav ul.navigation-items a.current:hover {
-              background-color: #fff;
-              color: #000; }
+              color: #808080; }
             body header nav ul.navigation-items a:hover {
               color: #808080; } }
   body .wrapper {
@@ -129,12 +129,11 @@ body {
       body .wrapper .index-illustration {
         margin: 0 auto;
         width: 50vh;
-        height: 50vh; } }
+        height: 100vh; } }
     @media only screen and (min-width: 600px) {
       body .wrapper .index-illustration {
         margin: 0 auto;
-        width: 50vh;
-        height: 50vh; } }
+        height: 100vh; } }
     body .wrapper .index-illustration .st0 {
       fill: none;
       stroke: #A1A5D3;
@@ -224,6 +223,14 @@ body {
           body .wrapper .info-introduction .box-style img {
             width: 100%;
             height: auto; } }
+    body .wrapper .headline {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      padding: 0 20px; }
+      @media only screen and (min-width: 1200px) {
+        body .wrapper .headline {
+          flex-direction: row;
+          justify-content: space-between; } }
     body .wrapper .skills-section {
       display: flex;
       flex-direction: column;
@@ -231,12 +238,12 @@ body {
       padding-top: 40px;
       padding-bottom: 40px;
       color: #808080; }
-      body .wrapper .skills-section.programming {
-        padding-bottom: 80px; }
       @media only screen and (min-width: 1200px) {
         body .wrapper .skills-section {
           flex-direction: row;
           justify-content: space-between; } }
+      body .wrapper .skills-section.programming {
+        padding-bottom: 80px; }
       body .wrapper .skills-section .skill-box {
         padding-bottom: 80px;
         justify-content: center;
@@ -258,13 +265,13 @@ body {
       padding: 30px 10px; }
       @media only screen and (min-width: 900px) {
         body .wrapper footer {
-          padding: 20px 20px;
+          padding: 50px 20px;
           display: flex;
           flex-direction: row;
           justify-content: space-between; } }
       body .wrapper footer a {
         text-decoration: none;
-        font-size: 1.125rem;
+        font-size: 0.875rem;
         color: #fff; }
         body .wrapper footer a:hover {
           color: #808080;

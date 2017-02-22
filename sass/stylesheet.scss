@@ -19,7 +19,7 @@ $red: #ff3948;
 $grassgreen: #22b573;
 
 //font sizes//
-$micro-copy: 0.75rem; //12px
+$micro-copy: 0.875rem; //12px
 $copy: 1.125rem; //18px
 $copy-bigscreen: 1.25rem; //20px
 $headline: 1.5rem; //24px
@@ -60,6 +60,8 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    background-color: $primary-color;
+
 
     @include for-desktop-up {
       margin-left: 200px;
@@ -201,8 +203,7 @@ body {
             font-size: $copy;
 
             &.current:link, &.current:visited, &.current:hover  {
-              background-color: $secondary-color;
-              color: $primary-color;
+              color: $accent-color;
             }
 
             &:hover {
@@ -217,6 +218,7 @@ body {
   .wrapper {
     margin-left: 10px;
     margin-right: 10px;
+
 
 
     @include for-tablet-portrait-up {
@@ -235,13 +237,13 @@ body {
       @include for-desktop-up {
         margin: 0 auto;
         width: 50vh;
-        height: 50vh;
+        height: 100vh;
       }
 
       @include for-tablet-portrait-up {
         margin: 0 auto;
-        width: 50vh;
-        height: 50vh;
+        //width: 50vh;
+        height: 100vh;
       }
 
       .st0 {
@@ -332,6 +334,7 @@ body {
       }
     }
 
+
     .info-introduction {
       display: flex;
       flex-direction: column-reverse;
@@ -374,6 +377,18 @@ body {
       }
     }
 
+    .headline {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      padding: 0 20px;
+
+      @include for-desktop-up {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+    }
+
     .skills-section {
       display: flex;
       flex-direction: column;
@@ -382,15 +397,16 @@ body {
       padding-bottom: 40px;
       color: $accent-color;
 
+      @include for-desktop-up {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
       &.programming {
         padding-bottom: 80px;
       }
 
-      @include for-desktop-up {
-        flex-direction: row;
-        justify-content: space-between;
 
-      }
 
       .skill-box {
         padding-bottom: 80px;
@@ -422,7 +438,7 @@ body {
       padding: 30px 10px;
 
       @include for-tablet-landscape-up {
-        padding: 20px 20px;
+        padding: 50px 20px;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -431,7 +447,7 @@ body {
 
       a {
         text-decoration: none;
-        font-size: $copy;
+        font-size: $micro-copy;
         color: $secondary-color;
 
         &:hover {
@@ -447,7 +463,7 @@ body {
       &.paragraph {
         padding-top: 50px;
       }
-      
+
       p {
         margin-bottom: 20px;
       }
