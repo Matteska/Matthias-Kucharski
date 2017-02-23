@@ -64,8 +64,11 @@ body {
 
 
     @include for-desktop-up {
-      margin-left: 200px;
-      margin-right: 200px;
+      max-width: 1000px;
+      width: 100%;
+      margin: 0 auto;
+      //margin-left: 200px;
+      //margin-right: 200px;
     }
 
     a.logo {
@@ -149,12 +152,20 @@ body {
       ul.navigation-items {
         opacity:0;
         visibility: hidden;
-        display: none;
+        display: flex;
         transition: all ease 420ms;
         position: absolute;
+        visibility: visible;
+        flex-direction: column;
+        justify-content: center;
+
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        z-index: 1;
 
         @include for-desktop-up {
-          display: flex;
           position: relative;
           flex-direction: row;
           justify-content: flex-end;
@@ -168,14 +179,6 @@ body {
           display: flex;
           opacity:1;
           visibility: visible;
-          flex-direction: column;
-          justify-content: center;
-
-          top: 0;
-          right: 0;
-          left: 0;
-          bottom: 0;
-          z-index: 1;
         }
 
 
@@ -227,15 +230,27 @@ body {
     }
 
     @include for-desktop-up {
-      margin-left: 200px;
-      margin-right: 200px;
-
+      max-width: 1000px;
+      width: 100%;
+      margin: 0 auto;
     }
 
-    .index-illustration {
+    @include for-big-desktop-up {
+      max-width: 1500px;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+
+
+    svg {
+
+      display: flex;
+      justify-content: center;
+      height: auto;
 
       @include for-desktop-up {
-        margin: 0 auto;
+
         width: 50vh;
         height: 100vh;
       }
@@ -436,44 +451,67 @@ body {
     footer {
       justify-content: space-between;
       padding: 30px 10px;
+      align-items: flex-end;
 
       @include for-tablet-landscape-up {
-        padding: 50px 20px;
+        padding: 50px 0px 20px 20px;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-
       }
 
-      a {
+      a.impressum {
         text-decoration: none;
-        font-size: $micro-copy;
         color: $secondary-color;
+        align-self: flex-end;
 
         &:hover {
           color: $accent-color;
           transition: all ease 420ms;
         }
       }
-    }
-    .impressum {
-      padding: 80px 20px;
-      width: 50%;
 
-      &.paragraph {
-        padding-top: 50px;
-      }
 
-      p {
-        margin-bottom: 20px;
-      }
+      ul {
+        list-style: none;
+        display: flex;
+        position: relative;
+        flex-direction: row;
+        //justify-content: flex-end;
+        list-style-type: none;
+        margin-right: 10px;
 
-      h2 {
-        margin: 20px 0;
-      }
+        li {
+        text-decoration: none;
+        list-style: none;
+        }
 
-      h3 {
-        margin-bottom: 10px;
+        li:hover {
+          .icon-style {
+            fill: $accent-color;
+          }
+        }
+
+        a {
+          align-self: flex-end;
+          text-decoration: none;
+          display: block;
+          &:hover {
+            color: $accent-color;
+            transition: all ease 420ms;
+          }
+        }
+
+        .icon-style {
+          fill: $secondary-color;
+        }
+
+        svg {
+          fill: #fff;
+          height: 20px;
+          width: auto;
+          padding: 0 20px;
+        }
       }
     }
   }
