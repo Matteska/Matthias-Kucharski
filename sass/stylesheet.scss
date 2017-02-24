@@ -1,12 +1,12 @@
 * {
   font-family: 'Karla', sans-serif;
-  background-color: #000;
+  background-color: #181918;
   margin: 0;
   padding: 0;
 }
 
 //main colors//
-$primary-color: #000;
+$primary-color: #181918;
 $secondary-color: #fff;
 $accent-color: #808080;
 
@@ -20,10 +20,14 @@ $grassgreen: #22b573;
 
 //font sizes//
 $micro-copy: 0.875rem; //12px
-$copy: 1.125rem; //18px
+$copy: 1rem; //16px
 $copy-bigscreen: 1.25rem; //20px
 $headline: 1.5rem; //24px
 $mobile-nav: 1.75rem; //28px
+
+
+//widths//
+
 
 //media query sizes//
 @mixin for-phone-only {
@@ -49,7 +53,7 @@ $mobile-nav: 1.75rem; //28px
 body {
   font-size: $copy;
   color: $secondary-color;
-  line-height: 130%;
+  line-height: 140%;
 
 
 
@@ -62,14 +66,24 @@ body {
     justify-content: space-between;
     background-color: $primary-color;
 
-
-    @include for-desktop-up {
-      max-width: 1000px;
+    @include for-tablet-portrait-up {
+      max-width: 800px;
       width: 100%;
       margin: 0 auto;
-      //margin-left: 200px;
-      //margin-right: 200px;
     }
+
+    @include for-desktop-up {
+      max-width: 1100px;
+      width: 100%;
+      margin: 0 auto;
+
+    }
+
+    //@include for-big-desktop-up {
+    //  max-width: 1500px;
+    //  width: 100%;
+    //  margin: 0 auto;
+  //  }
 
     a.logo {
       padding: 14px 20px;
@@ -108,7 +122,7 @@ body {
         right:0;
         flex-direction: column;
         justify-content: space-between;
-        background-color: #000;
+        background-color: $primary-color;
 
         &:hover {
           span {
@@ -225,21 +239,22 @@ body {
 
 
     @include for-tablet-portrait-up {
-      margin-left: 50px;
-      margin-right: 50px;
+      max-width: 800px;
+      width: 100%;
+      margin: 0 auto;
     }
 
     @include for-desktop-up {
-      max-width: 1000px;
+      max-width: 1100px;
       width: 100%;
       margin: 0 auto;
     }
 
-    @include for-big-desktop-up {
-      max-width: 1500px;
-      width: 100%;
-      margin: 0 auto;
-    }
+    //@include for-big-desktop-up {
+    //  max-width: 1500px;
+    //  width: 100%;
+    //  margin: 0 auto;
+    //}
 
 
 
@@ -354,7 +369,7 @@ body {
       display: flex;
       flex-direction: column-reverse;
       justify-content: space-between;
-      padding-top: 80px;
+      padding-top: 20px;
       padding-bottom: 80px;
       color: $secondary-color;
       font-size: $copy;
@@ -373,20 +388,25 @@ body {
         }
 
         &.right {
+          display: flex;
+
           @include for-phone-only {
             margin-bottom: 20px;
           }
+
+          img {
+            margin: 0 auto;
+            align-self: center;
+            @include for-phone-only {
+              width: 100%;
+              height: auto;
+            }
+          }
         }
 
-        p {
-          margin-bottom: 20px;
-        }
-
-        img {
-
-          @include for-phone-only {
-            width: 100%;
-            height: auto;
+        &.left {
+          h2, p {
+            margin-bottom: 20px;
           }
         }
       }
@@ -394,7 +414,7 @@ body {
 
     .headline {
       margin-top: 20px;
-      margin-bottom: 20px;
+      //margin-bottom: 20px;
       padding: 0 20px;
 
       @include for-desktop-up {
@@ -422,7 +442,6 @@ body {
       }
 
 
-
       .skill-box {
         padding-bottom: 80px;
         justify-content: center;
@@ -446,6 +465,29 @@ body {
           }
         }
       }
+    }
+
+    .work-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin: 20px 0;
+      padding: 20px;
+
+
+
+      .box-40 {
+        width: 40%;
+        height: 400px;
+        background-color: #00BFB2;
+      }
+
+      .box-60 {
+        width: 60%;
+        height: 400px;
+        background-color: #FFBC82;
+      }
+
     }
 
     footer {
@@ -482,8 +524,8 @@ body {
         margin-right: 10px;
 
         li {
-        text-decoration: none;
-        list-style: none;
+          text-decoration: none;
+          list-style: none;
         }
 
         li:hover {

@@ -1,13 +1,13 @@
 * {
   font-family: 'Karla', sans-serif;
-  background-color: #000;
+  background-color: #181918;
   margin: 0;
   padding: 0; }
 
 body {
-  font-size: 1.125rem;
+  font-size: 1rem;
   color: #fff;
-  line-height: 130%; }
+  line-height: 140%; }
   body header {
     margin-left: 0;
     margin-right: 0;
@@ -15,10 +15,15 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    background-color: #000; }
+    background-color: #181918; }
+    @media only screen and (min-width: 600px) {
+      body header {
+        max-width: 800px;
+        width: 100%;
+        margin: 0 auto; } }
     @media only screen and (min-width: 1200px) {
       body header {
-        max-width: 1000px;
+        max-width: 1100px;
         width: 100%;
         margin: 0 auto; } }
     body header a.logo {
@@ -47,7 +52,7 @@ body {
       right: 0;
       flex-direction: column;
       justify-content: space-between;
-      background-color: #000; }
+      background-color: #181918; }
       body header nav .hamburger:hover span {
         background-color: #808080; }
       @media only screen and (min-width: 1200px) {
@@ -110,7 +115,7 @@ body {
           transition: all ease 420ms; }
         @media only screen and (min-width: 1200px) {
           body header nav ul.navigation-items a {
-            font-size: 1.125rem; }
+            font-size: 1rem; }
             body header nav ul.navigation-items a.current:link, body header nav ul.navigation-items a.current:visited, body header nav ul.navigation-items a.current:hover {
               color: #808080; }
             body header nav ul.navigation-items a:hover {
@@ -120,16 +125,12 @@ body {
     margin-right: 10px; }
     @media only screen and (min-width: 600px) {
       body .wrapper {
-        margin-left: 50px;
-        margin-right: 50px; } }
-    @media only screen and (min-width: 1200px) {
-      body .wrapper {
-        max-width: 1000px;
+        max-width: 800px;
         width: 100%;
         margin: 0 auto; } }
-    @media only screen and (min-width: 1800px) {
+    @media only screen and (min-width: 1200px) {
       body .wrapper {
-        max-width: 1500px;
+        max-width: 1100px;
         width: 100%;
         margin: 0 auto; } }
     body .wrapper svg {
@@ -210,10 +211,10 @@ body {
       display: flex;
       flex-direction: column-reverse;
       justify-content: space-between;
-      padding-top: 80px;
+      padding-top: 20px;
       padding-bottom: 80px;
       color: #fff;
-      font-size: 1.125rem;
+      font-size: 1rem;
       line-height: 130%; }
       @media only screen and (min-width: 1200px) {
         body .wrapper .info-introduction {
@@ -224,18 +225,22 @@ body {
           body .wrapper .info-introduction .box-style {
             width: 50%;
             padding: 0 20px; } }
-        @media only screen and (max-width: 599px) {
-          body .wrapper .info-introduction .box-style.right {
-            margin-bottom: 20px; } }
-        body .wrapper .info-introduction .box-style p {
+        body .wrapper .info-introduction .box-style.right {
+          display: flex; }
+          @media only screen and (max-width: 599px) {
+            body .wrapper .info-introduction .box-style.right {
+              margin-bottom: 20px; } }
+          body .wrapper .info-introduction .box-style.right img {
+            margin: 0 auto;
+            align-self: center; }
+            @media only screen and (max-width: 599px) {
+              body .wrapper .info-introduction .box-style.right img {
+                width: 100%;
+                height: auto; } }
+        body .wrapper .info-introduction .box-style.left h2, body .wrapper .info-introduction .box-style.left p {
           margin-bottom: 20px; }
-        @media only screen and (max-width: 599px) {
-          body .wrapper .info-introduction .box-style img {
-            width: 100%;
-            height: auto; } }
     body .wrapper .headline {
       margin-top: 20px;
-      margin-bottom: 20px;
       padding: 0 20px; }
       @media only screen and (min-width: 1200px) {
         body .wrapper .headline {
@@ -270,6 +275,20 @@ body {
           @media only screen and (min-width: 1200px) {
             body .wrapper .skills-section .skill-box img {
               width: 50px; } }
+    body .wrapper .work-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin: 20px 0;
+      padding: 20px; }
+      body .wrapper .work-container .box-40 {
+        width: 40%;
+        height: 400px;
+        background-color: #00BFB2; }
+      body .wrapper .work-container .box-60 {
+        width: 60%;
+        height: 400px;
+        background-color: #FFBC82; }
     body .wrapper footer {
       justify-content: space-between;
       padding: 30px 10px;
