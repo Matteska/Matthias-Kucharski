@@ -83,7 +83,7 @@ body {
     //  max-width: 1500px;
     //  width: 100%;
     //  margin: 0 auto;
-  //  }
+    //  }
 
     a.logo {
       padding: 14px 20px;
@@ -187,6 +187,7 @@ body {
           margin-right: 10px;
           opacity: 1;
           visibility: visible;
+
         }
 
         &.hamburger-overlay {
@@ -257,7 +258,7 @@ body {
     //}
 
 
-
+    //Index Illustration//
     svg {
 
       display: flex;
@@ -467,28 +468,40 @@ body {
       }
     }
 
+    //Arbeiten//
     .work-container {
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
       justify-content: space-between;
       margin: 20px 0;
       padding: 20px;
 
-
+      @include for-desktop-up {
+        flex-direction: row;
+        justify-content: space-between;
+      }
 
       .box-40 {
-        width: 40%;
-        height: 400px;
+        height: 430px;
         background-color: #00BFB2;
+
+        @include for-desktop-up {
+          width: 40%;
+        }
+
       }
 
       .box-60 {
-        width: 60%;
-        height: 400px;
+        height: 430px;
         background-color: #FFBC82;
-      }
 
+        @include for-desktop-up {
+          width: 60%;
+        }
+      }
     }
+
+    
 
     footer {
       justify-content: space-between;
