@@ -1,12 +1,12 @@
 * {
   font-family: 'Karla', sans-serif;
-  background-color: #181918;
+  background-color: #060607;
   margin: 0;
   padding: 0;
 }
 
 //main colors//
-$primary-color: #181918;
+$primary-color: #060607;
 $secondary-color: #fff;
 $accent-color: #808080;
 
@@ -496,12 +496,52 @@ body {
         background-color: #FFBC82;
 
         @include for-desktop-up {
-          width: 60%;
+          width: 58%;
+        }
+      }
+
+      .box-33 {
+        position: relative;
+
+          &:hover .overlay {
+          opacity:1;
+          }
+
+        @include for-desktop-up {
+          width: 32%;
+        }
+        img {
+          width: 100%;
+        }
+      }
+
+
+
+      .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: .7s ease;
+        background-color: $accent-color;
+
+        .text {
+          color: white;
+          font-size: 20px;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
         }
       }
     }
 
-    
+
 
     footer {
       justify-content: space-between;
