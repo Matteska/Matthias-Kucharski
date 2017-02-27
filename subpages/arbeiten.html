@@ -12,7 +12,7 @@
   <meta property="og:image" content="">
   <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="../css/stylesheet.css">
-  <!--<link rel="stylesheet" href="../unslider/dist/css/unslider.css">-->
+
 </head>
 <body>
   <header>
@@ -33,32 +33,49 @@
     </nav>
   </header>
   <div class="wrapper">
-    <div class="work-container">
-      <div class="box-33">
-        <img src="../images/masterfaster.png">
-      </div>
+    <!--<div class="work-container">
+    <div class="box-33">
+    <img src="../images/masterfaster.png">
+    <div class="overlay">
+    <div class="text"></div>
+  </div>
+</div>
 
-      <div class="box-33">
-        <img src="../images/masterfaster.png">
-        <div class="overlay">
-          <div class="text">Hello World</div>
-        </div>
-      </div>
-      <div class="box-33"><img src="../images/masterfaster.png"></div>
-    </div>
+<div class="box-33">
+<img src="../images/masterfaster.png">
+<div class="overlay">
+<div class="text"></div>
+</div>
+</div>
 
-    <div class="work-container">
-      <div class="box-60"></div>
-      <div class="box-40"></div>
-    </div>
+<div class="box-33">
+<img src="../images/masterfaster.png">
+<div class="overlay">
+<div class="text"></div>
+</div>
+</div>
+</div>
 
-    <!--<div class="my-slider">
-    <ul>
-    <li><img src="../images/img-1.jpg"></li>
-    <li><img src="../images/img-2.jpg"></li>
-    <li><img src="../images/img-3.jpg"></li>
-  </ul>
+<div class="work-container">
+<div class="box-60">
+<img src="../images/masterfaster2.png">
+<div class="overlay">
+<div class="text"></div>
+</div>
+
+</div>
+
 </div>-->
+
+<div class="my-slider">
+	<ul>
+		<li><img src="../images/img-1.jpg"></li>
+		<li><img src="../images/img-2.jpg">Another slide</li>
+		<li><img src="../images/img-3.jpg">My last slide</li>
+	</ul>
+</div>
+
+
 
 
 
@@ -115,13 +132,15 @@
 </footer>
 </div>
 
-<!--<script type="text/javascript" src="../js/jquery-3.1.1.js"></script>
-<script type="text/javascript" src="../js/unslider.js"></script>
+<script src="../js/jquery-3.1.1.min.js"></script>
+<script src="../js/unslider.js"></script>
 <script>
-jQuery(document).ready(function($) {
-$('.my-slider').unslider();
-});
-</script>-->
+		jQuery(document).ready(function($) {
+			$('.my-slider').unslider();
+		});
+	</script>
+
+
 
 <script>
 document.getElementsByClassName("hamburger")[0].addEventListener("click", function(){
