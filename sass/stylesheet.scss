@@ -68,7 +68,7 @@ body {
     justify-content: space-between;
     background-color: $primary-color;
 
-    @include for-tablet-portrait-up {
+    @include for-tablet-landscape-up {
       max-width: 800px;
       width: 100%;
       margin: 0 auto;
@@ -187,7 +187,7 @@ nav {
       flex-direction: row;
       justify-content: flex-end;
       list-style-type: none;
-      margin-right: 10px;
+      /*margin-right: 10px;*/
       opacity: 1;
       visibility: visible;
 
@@ -242,13 +242,13 @@ nav {
 
 
   @include for-tablet-portrait-up {
-    max-width: 700px;
+    max-width: 500px;
     width: 100%;
     margin: 0 auto;
   }
 
   @include for-tablet-landscape-up {
-    max-width: 700px;
+    max-width: 800px;
     width: 100%;
     margin: 0 auto;
   }
@@ -371,7 +371,6 @@ nav {
     padding-bottom: 40px;
     color: $secondary-color;
     font-size: $copy;
-    line-height: 130%;
 
     &.hero {
       padding-top: 40px;
@@ -431,7 +430,7 @@ nav {
   }
 
   .skills-section-container {
-    padding: 40px 0;
+    padding: 40px 20px;
   }
 
   .headline {
@@ -505,7 +504,7 @@ nav {
 
   footer {
     justify-content: space-between;
-    padding-bottom: 20px;
+    padding: 0 20px 20px 20px;
     align-items: flex-end;
 
     @include for-tablet-landscape-up {
@@ -532,9 +531,8 @@ nav {
       display: flex;
       position: relative;
       flex-direction: row;
-      //justify-content: flex-end;
       list-style-type: none;
-      margin-right: 10px;
+
 
       @include for-phone-only {
         display: none;
