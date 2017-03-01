@@ -38,6 +38,9 @@ body {
       font-size: 14px;
     }
   }*/ }
+      body header a.logo.logo:hover {
+        color: #808080;
+        transition: all ease 240ms; }
       body header a.logo #name {
         font-size: 18px; }
         @media only screen and (min-width: 1200px) {
@@ -223,21 +226,23 @@ body {
       body .wrapper .default-container.hero {
         padding-top: 40px;
         padding-bottom: 80px; }
+      body .wrapper .default-container.portfolio {
+        border-top: 1px solid #808080; }
       @media only screen and (min-width: 900px) {
         body .wrapper .default-container {
           flex-direction: row; } }
       body .wrapper .default-container .box-style {
-        padding: 0 10px; }
+        padding: 0 20px; }
         @media only screen and (min-width: 900px) {
           body .wrapper .default-container .box-style {
-            width: 50%;
-            padding: 0 20px; } }
+            width: 50%; } }
         body .wrapper .default-container .box-style.right {
           display: flex; }
           @media only screen and (max-width: 599px) {
             body .wrapper .default-container .box-style.right {
               margin-bottom: 20px; } }
           body .wrapper .default-container .box-style.right img {
+            width: 100%;
             margin: 0 auto;
             align-self: center; }
             @media only screen and (max-width: 599px) {
@@ -249,6 +254,9 @@ body {
         body .wrapper .default-container .box-style.left p {
           margin-bottom: 20px;
           color: #808080; }
+      body .wrapper .default-container .box-style-full-width {
+        width: 80%;
+        margin: 0 auto; }
       body .wrapper .default-container p.hero-headline {
         font-size: 45px;
         line-height: 130%; }
