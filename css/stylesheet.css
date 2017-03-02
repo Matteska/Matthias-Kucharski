@@ -226,8 +226,8 @@ body {
       body .wrapper .default-container.hero {
         padding-top: 40px;
         padding-bottom: 80px; }
-      body .wrapper .default-container.portfolio {
-        border-top: 1px solid #808080; }
+      body .wrapper .default-container.portfolio-line {
+        border-bottom: 1px solid #808080; }
       @media only screen and (min-width: 900px) {
         body .wrapper .default-container {
           flex-direction: row; } }
@@ -303,16 +303,18 @@ body {
           @media only screen and (min-width: 600px) {
             body .wrapper .skills-section .skill-box img {
               width: 50px; } }
-    body .wrapper .work-container {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      margin: 10px 0;
-      padding: 20px; }
-      @media only screen and (min-width: 1200px) {
-        body .wrapper .work-container {
-          flex-direction: row;
-          justify-content: space-between; } }
+    body .wrapper a.button {
+      border: 1px solid #fff;
+      color: #fff;
+      text-align: center;
+      display: inline-block;
+      padding: 10px;
+      border-radius: 3px;
+      text-decoration: none; }
+      body .wrapper a.button:hover {
+        color: #808080;
+        border-color: #808080;
+        transition: all ease 420ms; }
     body .wrapper footer {
       justify-content: space-between;
       padding: 0 20px 20px 20px;
