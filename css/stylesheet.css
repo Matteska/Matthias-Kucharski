@@ -226,6 +226,11 @@ body {
       body .wrapper .default-container.hero {
         padding-top: 40px;
         padding-bottom: 80px; }
+      body .wrapper .default-container.contact-box {
+        justify-content: center;
+        flex-direction: column; }
+        body .wrapper .default-container.contact-box h2 {
+          padding-bottom: 20px; }
       body .wrapper .default-container.portfolio-line {
         border-bottom: 1px solid #808080; }
       @media only screen and (min-width: 900px) {
@@ -257,13 +262,17 @@ body {
       body .wrapper .default-container .box-style-full-width {
         width: 80%;
         margin: 0 auto; }
-      body .wrapper .default-container p.hero-headline {
+      body .wrapper .default-container .hero-headline {
         font-size: 45px;
-        line-height: 130%; }
+        line-height: 130%;
+        text-align: left; }
         @media only screen and (max-width: 599px) {
-          body .wrapper .default-container p.hero-headline {
+          body .wrapper .default-container .hero-headline {
             text-align: center;
             font-size: 35px; } }
+      body .wrapper .default-container .contact-headline {
+        font-size: 45px;
+        color: #fff; }
     body .wrapper .skills-section-container {
       padding: 40px 20px; }
     body .wrapper .headline {
@@ -281,8 +290,8 @@ body {
       padding-bottom: 40px;
       color: #808080;
       /*&.programming {
-      padding-bottom: 40px;
-    }*/ }
+    padding-bottom: 40px;
+  }*/ }
       @media only screen and (min-width: 600px) {
         body .wrapper .skills-section {
           flex-direction: row;
@@ -315,6 +324,31 @@ body {
         color: #808080;
         border-color: #808080;
         transition: all ease 420ms; }
+    body .wrapper ul {
+      list-style: none;
+      display: flex;
+      position: relative;
+      flex-direction: row;
+      list-style-type: none; }
+      body .wrapper ul li {
+        text-decoration: none;
+        list-style: none; }
+      body .wrapper ul li:hover .icon-style {
+        fill: #808080; }
+      body .wrapper ul a {
+        align-self: flex-end;
+        text-decoration: none;
+        display: block; }
+        body .wrapper ul a:hover {
+          color: #808080;
+          transition: all ease 420ms; }
+      body .wrapper ul .icon-style {
+        fill: #fff; }
+      body .wrapper ul svg {
+        fill: #fff;
+        height: 20px;
+        width: auto;
+        padding-left: 10px; }
     body .wrapper footer {
       justify-content: space-between;
       padding: 0 20px 20px 20px;
@@ -332,33 +366,5 @@ body {
         body .wrapper footer a.impressum:hover {
           color: #808080;
           transition: all ease 420ms; }
-      body .wrapper footer ul {
-        list-style: none;
-        display: flex;
-        position: relative;
-        flex-direction: row;
-        list-style-type: none; }
-        @media only screen and (max-width: 599px) {
-          body .wrapper footer ul {
-            display: none; } }
-        body .wrapper footer ul li {
-          text-decoration: none;
-          list-style: none; }
-        body .wrapper footer ul li:hover .icon-style {
-          fill: #808080; }
-        body .wrapper footer ul a {
-          align-self: flex-end;
-          text-decoration: none;
-          display: block; }
-          body .wrapper footer ul a:hover {
-            color: #808080;
-            transition: all ease 420ms; }
-        body .wrapper footer ul .icon-style {
-          fill: #fff; }
-        body .wrapper footer ul svg {
-          fill: #fff;
-          height: 20px;
-          width: auto;
-          padding-left: 10px; }
 
 /*# sourceMappingURL=stylesheet.css.map */

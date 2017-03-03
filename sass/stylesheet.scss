@@ -386,6 +386,15 @@ nav {
       padding-bottom: 80px;
     }
 
+    &.contact-box {
+      justify-content: center;
+      flex-direction: column;
+
+      h2 {
+        padding-bottom: 20px;
+      }
+    }
+
     &.portfolio-line {
       border-bottom: 1px solid $accent-color;
     }
@@ -437,14 +446,20 @@ nav {
       margin: 0 auto;
     }
 
-    p.hero-headline {
+    .hero-headline {
       font-size: 45px;
       line-height: 130%;
+      text-align: left;
 
       @include for-phone-only {
         text-align: center;
         font-size: 35px;
       }
+    }
+
+    .contact-headline {
+      font-size: 45px;
+      color: $secondary-color;
     }
   }
 
@@ -478,120 +493,114 @@ nav {
     }
 
     /*&.programming {
-      padding-bottom: 40px;
-    }*/
+    padding-bottom: 40px;
+  }*/
 
 
-    .skill-box {
-      padding-bottom: 80px;
-      justify-content: center;
-      text-align: center;
+  .skill-box {
+    padding-bottom: 80px;
+    justify-content: center;
+    text-align: center;
 
-      .software {
-        border: 2px solid red;
-      }
+    .software {
+      border: 2px solid red;
+    }
 
-      @include for-desktop-up {
-        width: 25%;
-        padding: 0 20px;
-      }
+    @include for-desktop-up {
+      width: 25%;
+      padding: 0 20px;
+    }
 
-      img {
-        width: 80px;
-        padding-bottom: 10px;
+    img {
+      width: 80px;
+      padding-bottom: 10px;
 
-        @include for-tablet-portrait-up {
-          width: 50px;
-        }
+      @include for-tablet-portrait-up {
+        width: 50px;
       }
     }
   }
+}
 
-  //Arbeiten//
-  a.button {
-    border: 1px solid $secondary-color;
-    color: $secondary-color;
-    text-align: center;
-    display: inline-block;
-    padding: 10px;
-    border-radius:3px;
+//Arbeiten//
+a.button {
+  border: 1px solid $secondary-color;
+  color: $secondary-color;
+  text-align: center;
+  display: inline-block;
+  padding: 10px;
+  border-radius:3px;
+  text-decoration: none;
+
+  &:hover {
+    color: $accent-color;
+    border-color: $accent-color;
+    transition: all ease 420ms;
+  }
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  list-style-type: none;
+
+  li {
     text-decoration: none;
+    list-style: none;
+  }
 
+  li:hover {
+    .icon-style {
+      fill: $accent-color;
+    }
+  }
+
+  a {
+    align-self: flex-end;
+    text-decoration: none;
+    display: block;
     &:hover {
       color: $accent-color;
-      border-color: $accent-color;
       transition: all ease 420ms;
     }
   }
 
-  footer {
+  .icon-style {
+    fill: $secondary-color;
+  }
+
+  svg {
+    fill: #fff;
+    height: 20px;
+    width: auto;
+    padding-left: 10px;
+  }
+}
+
+footer {
+  justify-content: space-between;
+  padding: 0 20px 20px 20px;
+  align-items: flex-end;
+
+  @include for-tablet-landscape-up {
+    /*padding: 50px 0px 20px 0px;*/
+    display: flex;
+    flex-direction: row;
     justify-content: space-between;
-    padding: 0 20px 20px 20px;
-    align-items: flex-end;
+  }
 
-    @include for-tablet-landscape-up {
-      /*padding: 50px 0px 20px 0px;*/
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-    }
+  a.impressum {
+    text-decoration: none;
+    color: $secondary-color;
+    align-self: flex-end;
 
-    a.impressum {
-      text-decoration: none;
-      color: $secondary-color;
-      align-self: flex-end;
-
-      &:hover {
-        color: $accent-color;
-        transition: all ease 420ms;
-      }
-    }
-
-
-    ul {
-      list-style: none;
-      display: flex;
-      position: relative;
-      flex-direction: row;
-      list-style-type: none;
-
-
-      @include for-phone-only {
-        display: none;
-      }
-
-      li {
-        text-decoration: none;
-        list-style: none;
-      }
-
-      li:hover {
-        .icon-style {
-          fill: $accent-color;
-        }
-      }
-
-      a {
-        align-self: flex-end;
-        text-decoration: none;
-        display: block;
-        &:hover {
-          color: $accent-color;
-          transition: all ease 420ms;
-        }
-      }
-
-      .icon-style {
-        fill: $secondary-color;
-      }
-
-      svg {
-        fill: #fff;
-        height: 20px;
-        width: auto;
-        padding-left: 10px;
-      }
+    &:hover {
+      color: $accent-color;
+      transition: all ease 420ms;
     }
   }
+}
 }
 }
