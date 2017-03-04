@@ -287,7 +287,6 @@ body {
       flex-direction: column;
       justify-content: center;
       padding-top: 40px;
-      padding-bottom: 40px;
       color: #808080;
       /*&.programming {
     padding-bottom: 40px;
@@ -297,11 +296,9 @@ body {
           flex-direction: row;
           justify-content: space-between; } }
       body .wrapper .skills-section .skill-box {
-        padding-bottom: 80px;
+        /*padding-bottom: 80px;*/
         justify-content: center;
         text-align: center; }
-        body .wrapper .skills-section .skill-box .software {
-          border: 2px solid red; }
         @media only screen and (min-width: 1200px) {
           body .wrapper .skills-section .skill-box {
             width: 25%;

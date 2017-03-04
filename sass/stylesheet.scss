@@ -40,12 +40,16 @@ $mobile-nav: 1.75rem; //28px
   @media only screen and (min-width: 600px) { @content; }
 }
 
-@mixin for-tablet-inbetween {
+@mixin for-ipad-up {
   @media only screen and (min-width: 768px) { @content; }
 }
 
 @mixin for-tablet-landscape-up {
   @media only screen and (min-width: 900px) { @content; }
+}
+
+@mixin for-ipad-pro-landscape {
+  @media only screen and (min-width: 1024px) { @content; }
 }
 
 @mixin for-desktop-up {
@@ -484,7 +488,6 @@ nav {
     flex-direction: column;
     justify-content: center;
     padding-top: 40px;
-    padding-bottom: 40px;
     color: $accent-color;
 
     @include for-tablet-portrait-up {
@@ -498,18 +501,17 @@ nav {
 
 
   .skill-box {
-    padding-bottom: 80px;
+    /*padding-bottom: 80px;*/
     justify-content: center;
     text-align: center;
 
-    .software {
-      border: 2px solid red;
-    }
 
     @include for-desktop-up {
       width: 25%;
       padding: 0 20px;
     }
+
+
 
     img {
       width: 80px;
