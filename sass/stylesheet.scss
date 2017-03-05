@@ -397,9 +397,14 @@ nav {
       h2 {
         padding-bottom: 20px;
       }
+
+      .contact-headline {
+        font-size: 45px;
+        color: $secondary-color;
+      }
     }
 
-    &.portfolio-line {
+    &.endline {
       border-bottom: 1px solid $accent-color;
     }
 
@@ -462,10 +467,7 @@ nav {
     }
 
 
-    .contact-headline {
-      font-size: 45px;
-      color: $secondary-color;
-    }
+
   }
 
   .skills-section-container {
@@ -525,7 +527,18 @@ nav {
   }
 }
 
+
+
+
 //Arbeiten//
+
+.contact-box {
+  a {
+    padding: 30px;
+    margin-left: 10px;
+  }
+}
+
 a.button {
   border: 1px solid $secondary-color;
   color: $secondary-color;
