@@ -263,8 +263,8 @@ body {
         width: 80%;
         margin: 0 auto; }
       body .wrapper .default-container .hero-headline {
-        font-size: 45px;
-        line-height: 130%;
+        font-size: 30px;
+        line-height: 140%;
         text-align: left; }
         @media only screen and (max-width: 599px) {
           body .wrapper .default-container .hero-headline {
@@ -296,7 +296,7 @@ body {
           flex-direction: row;
           justify-content: space-between; } }
       body .wrapper .skills-section .skill-box {
-        /*padding-bottom: 80px;*/
+        padding-bottom: 80px;
         justify-content: center;
         text-align: center; }
         @media only screen and (min-width: 1200px) {

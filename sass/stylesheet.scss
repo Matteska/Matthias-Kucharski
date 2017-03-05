@@ -451,8 +451,8 @@ nav {
     }
 
     .hero-headline {
-      font-size: 45px;
-      line-height: 130%;
+      font-size: 30px;
+      line-height: 140%;
       text-align: left;
 
       @include for-phone-only {
@@ -460,6 +460,7 @@ nav {
         font-size: 35px;
       }
     }
+
 
     .contact-headline {
       font-size: 45px;
@@ -501,7 +502,7 @@ nav {
 
 
   .skill-box {
-    /*padding-bottom: 80px;*/
+    padding-bottom: 80px;
     justify-content: center;
     text-align: center;
 
