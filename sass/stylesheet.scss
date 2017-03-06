@@ -83,7 +83,7 @@ body {
     }
 
     @include for-desktop-up {
-      max-width: 1100px;
+      max-width: 1170px;
       width: 100%;
       margin: 0 auto;
 
@@ -266,7 +266,7 @@ nav {
   }
 
   @include for-desktop-up {
-    max-width: 1100px;
+    max-width: 1170px;
     width: 100%;
     margin: 0 auto;
   }
@@ -376,7 +376,6 @@ nav {
 
   .default-container {
     display: flex;
-    flex-direction: column-reverse;
     justify-content: space-between;
     align-items:center;
     padding-top: 80px;
@@ -384,6 +383,9 @@ nav {
     color: $secondary-color;
     font-size: $copy;
 
+    &.about {
+      align-items:flex-start;
+    }
 
     &.hero {
       padding-top: 40px;
@@ -472,7 +474,12 @@ nav {
   }
 
   .skills-section-container {
-    padding: 40px 20px;
+    padding: 0 20px;
+
+    h2 {
+      margin: 20px 0;
+
+    }
   }
 
   .headline {
@@ -491,13 +498,13 @@ nav {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 40px 0px;
+    /*padding: 40px 0px;*/
     color: $accent-color;
 
 
     &.software, &.programming {
       p {
-        color: $rose;
+        color: $lilac;
       }
     }
 
@@ -521,6 +528,16 @@ nav {
     padding-bottom: 80px;
     justify-content: center;
     text-align: center;
+
+    &.illustrator {
+      padding-left: 0;
+    }
+
+    &.html5 {
+      padding-left: 0;
+    }
+
+
 
     @include for-desktop-up {
       width: 25%;

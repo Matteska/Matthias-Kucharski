@@ -23,7 +23,7 @@ body {
         margin: 0 auto; } }
     @media only screen and (min-width: 1200px) {
       body header {
-        max-width: 1100px;
+        max-width: 1170px;
         width: 100%;
         margin: 0 auto; } }
     body header a.logo {
@@ -141,7 +141,7 @@ body {
         margin: 0 auto; } }
     @media only screen and (min-width: 1200px) {
       body .wrapper {
-        max-width: 1100px;
+        max-width: 1170px;
         width: 100%;
         margin: 0 auto; } }
     body .wrapper svg {
@@ -216,13 +216,14 @@ body {
         stroke-miterlimit: 10; }
     body .wrapper .default-container {
       display: flex;
-      flex-direction: column-reverse;
       justify-content: space-between;
       align-items: center;
       padding-top: 80px;
       padding-bottom: 40px;
       color: #fff;
       font-size: 1.125rem; }
+      body .wrapper .default-container.about {
+        align-items: flex-start; }
       body .wrapper .default-container.hero {
         padding-top: 40px;
         padding-bottom: 80px; }
@@ -275,7 +276,9 @@ body {
             text-align: center;
             font-size: 35px; } }
     body .wrapper .skills-section-container {
-      padding: 40px 20px; }
+      padding: 0 20px; }
+      body .wrapper .skills-section-container h2 {
+        margin: 20px 0; }
     body .wrapper .headline {
       margin-top: 20px 0;
       padding: 0 20px; }
@@ -287,13 +290,13 @@ body {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      padding: 40px 0px;
+      /*padding: 40px 0px;*/
       color: #808080;
       /*&.programming {
     padding-bottom: 40px;
   }*/ }
       body .wrapper .skills-section.software p, body .wrapper .skills-section.programming p {
-        color: #fc7c8b; }
+        color: #A1A5D3; }
       body .wrapper .skills-section.freetime p {
         color: #A1A5D3; }
       @media only screen and (min-width: 600px) {
@@ -304,6 +307,10 @@ body {
         padding-bottom: 80px;
         justify-content: center;
         text-align: center; }
+        body .wrapper .skills-section .skill-box.illustrator {
+          padding-left: 0; }
+        body .wrapper .skills-section .skill-box.html5 {
+          padding-left: 0; }
         @media only screen and (min-width: 1200px) {
           body .wrapper .skills-section .skill-box {
             width: 25%;
