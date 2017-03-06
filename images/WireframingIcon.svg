@@ -3,11 +3,16 @@
 <svg version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:#FFFFFF;}
-	.st1{fill:none;stroke:#FFFFFF;stroke-width:2;stroke-miterlimit:10;}
+	.st0{fill:#FC7C8B;}
+	.st1{fill:none;stroke:#FC7C8B;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st2{fill:none;stroke:#FC7C8B;stroke-width:2;stroke-miterlimit:10;}
 </style>
-<rect class="st0" width="22.6" height="50"/>
-<rect x="27.4" class="st0" width="22.6" height="26"/>
+<g>
+	<path class="st0" d="M48,2v22H2V2H48 M50,0H0v26h50V0L50,0z"/>
+</g>
+<g>
+	<path class="st0" d="M20.6,32.7V48H2V32.7H20.6 M22.6,30.7H0V50h22.6V30.7L22.6,30.7z"/>
+</g>
 <g>
 	<line class="st1" x1="27.3" y1="32" x2="50" y2="32"/>
 	<line class="st1" x1="27.3" y1="36.2" x2="50" y2="36.2"/>
@@ -15,4 +20,13 @@
 	<line class="st1" x1="27.3" y1="44.8" x2="50" y2="44.8"/>
 	<line class="st1" x1="27.3" y1="49" x2="50" y2="49"/>
 </g>
+<g>
+	<path class="st0" d="M25,8.3c2.6,0,4.7,2.1,4.7,4.7s-2.1,4.7-4.7,4.7s-4.7-2.1-4.7-4.7S22.4,8.3,25,8.3 M25,6.3
+		c-3.7,0-6.7,3-6.7,6.7s3,6.7,6.7,6.7s6.7-3,6.7-6.7S28.7,6.3,25,6.3L25,6.3z"/>
+</g>
+<g>
+	<line class="st2" x1="21.4" y1="32" x2="1.1" y2="49"/>
+</g>
+<line class="st2" x1="0.9" y1="32" x2="21" y2="48.7"/>
+<polygon class="st0" points="23.6,13 23.6,10.9 25.5,11.9 27.3,13 25.5,14.1 23.6,15.1 "/>
 </svg>

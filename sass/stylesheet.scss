@@ -22,8 +22,8 @@ $grassgreen: #22b573;
 
 //font sizes//
 $micro-copy: 0.875rem; //12px
-$copy: 1rem; //16px
-$copy-bigscreen: 1.25rem; //20px
+$copy: 1.125rem; //18px
+$micro-copy: 1rem; //16px
 $headline: 1.5rem; //24px
 $mobile-nav: 1.75rem; //28px
 
@@ -278,7 +278,7 @@ nav {
 
     display: flex;
     justify-content: center;
-    height: 70vh;
+    height: 50vh;
     margin: 0 auto;
 
     @include for-big-desktop-up {
@@ -440,7 +440,8 @@ nav {
 
       &.left {
         h2 {
-          margin-bottom: 20px;
+          line-height: 140%;
+          margin: 20px 0;
         }
 
         p {
@@ -490,8 +491,21 @@ nav {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-top: 40px;
+    padding: 40px 0px;
     color: $accent-color;
+
+
+    &.software, &.programming {
+      p {
+        color: $rose;
+      }
+    }
+
+    &.freetime {
+      p {
+        color: $lilac;
+      }
+    }
 
     @include for-tablet-portrait-up {
       flex-direction: row;
@@ -507,7 +521,6 @@ nav {
     padding-bottom: 80px;
     justify-content: center;
     text-align: center;
-
 
     @include for-desktop-up {
       width: 25%;
@@ -528,9 +541,6 @@ nav {
 }
 
 
-
-
-//Arbeiten//
 
 .contact-box {
   a {
@@ -595,28 +605,58 @@ ul {
   }
 }
 
-footer {
-  justify-content: space-between;
-  padding: 0 20px 20px 20px;
-  align-items: flex-end;
+.impressum {
+  width: 80%;
+  padding: 40px 20px;
 
-  @include for-tablet-landscape-up {
-    /*padding: 50px 0px 20px 0px;*/
+  h1 {
+    margin-bottom: 40px;
+  }
+
+  h2 {
+    color: $secondary-color;
+    font-size: $copy;
+  }
+
+  p {
+    color: $accent-color;
+  }
+
+  a {
+    color: $accent-color;
+  }
+}
+}
+
+
+footer {
+  background-color: #1d1d21;
+  font-size: $micro-copy;
+
+  .footer-content {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-  }
+    padding: 20px 0;
 
-  a.impressum {
-    text-decoration: none;
-    color: $secondary-color;
-    align-self: flex-end;
-
-    &:hover {
-      color: $accent-color;
-      transition: all ease 420ms;
+    &, p, a {
+      background-color: #1d1d21;
+      color: $secondary-color;
+      text-decoration: none;
     }
+
+    a:hover {
+      color: $accent-color;
+      transition: all ease 240ms;
+    }
+
+    @include for-desktop-up {
+      max-width: 1100px;
+      width: 100%;
+      margin: 0 auto;
+    }
+
   }
-}
+
 }
 }

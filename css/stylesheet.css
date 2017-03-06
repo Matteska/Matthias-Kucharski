@@ -5,7 +5,7 @@
   padding: 0; }
 
 body {
-  font-size: 1rem;
+  font-size: 1.125rem;
   color: #fff;
   line-height: 140%; }
   body header {
@@ -121,7 +121,7 @@ body {
           transition: all ease 420ms; }
         @media only screen and (min-width: 1200px) {
           body header nav ul.navigation-items a {
-            font-size: 1rem; }
+            font-size: 1.125rem; }
             body header nav ul.navigation-items a.current:link, body header nav ul.navigation-items a.current:visited, body header nav ul.navigation-items a.current:hover {
               color: #808080; }
             body header nav ul.navigation-items a:hover {
@@ -147,7 +147,7 @@ body {
     body .wrapper svg {
       display: flex;
       justify-content: center;
-      height: 70vh;
+      height: 50vh;
       margin: 0 auto; }
       @media only screen and (min-width: 1800px) {
         body .wrapper svg {
@@ -222,7 +222,7 @@ body {
       padding-top: 80px;
       padding-bottom: 40px;
       color: #fff;
-      font-size: 1rem; }
+      font-size: 1.125rem; }
       body .wrapper .default-container.hero {
         padding-top: 40px;
         padding-bottom: 80px; }
@@ -258,7 +258,8 @@ body {
                 width: 100%;
                 height: auto; } }
         body .wrapper .default-container .box-style.left h2 {
-          margin-bottom: 20px; }
+          line-height: 140%;
+          margin: 20px 0; }
         body .wrapper .default-container .box-style.left p {
           margin-bottom: 20px;
           color: #808080; }
@@ -286,11 +287,15 @@ body {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      padding-top: 40px;
+      padding: 40px 0px;
       color: #808080;
       /*&.programming {
     padding-bottom: 40px;
   }*/ }
+      body .wrapper .skills-section.software p, body .wrapper .skills-section.programming p {
+        color: #fc7c8b; }
+      body .wrapper .skills-section.freetime p {
+        color: #A1A5D3; }
       @media only screen and (min-width: 600px) {
         body .wrapper .skills-section {
           flex-direction: row;
@@ -349,22 +354,37 @@ body {
         height: 20px;
         width: auto;
         padding-left: 10px; }
-    body .wrapper footer {
-      justify-content: space-between;
-      padding: 0 20px 20px 20px;
-      align-items: flex-end; }
-      @media only screen and (min-width: 900px) {
-        body .wrapper footer {
-          /*padding: 50px 0px 20px 0px;*/
-          display: flex;
-          flex-direction: row;
-          justify-content: space-between; } }
-      body .wrapper footer a.impressum {
-        text-decoration: none;
+    body .wrapper .impressum {
+      width: 80%;
+      padding: 40px 20px; }
+      body .wrapper .impressum h1 {
+        margin-bottom: 40px; }
+      body .wrapper .impressum h2 {
         color: #fff;
-        align-self: flex-end; }
-        body .wrapper footer a.impressum:hover {
-          color: #808080;
-          transition: all ease 420ms; }
+        font-size: 1.125rem; }
+      body .wrapper .impressum p {
+        color: #808080; }
+      body .wrapper .impressum a {
+        color: #808080; }
+  body footer {
+    background-color: #1d1d21;
+    font-size: 1rem; }
+    body footer .footer-content {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 20px 0; }
+      body footer .footer-content, body footer .footer-content p, body footer .footer-content a {
+        background-color: #1d1d21;
+        color: #fff;
+        text-decoration: none; }
+      body footer .footer-content a:hover {
+        color: #808080;
+        transition: all ease 240ms; }
+      @media only screen and (min-width: 1200px) {
+        body footer .footer-content {
+          max-width: 1100px;
+          width: 100%;
+          margin: 0 auto; } }
 
 /*# sourceMappingURL=stylesheet.css.map */

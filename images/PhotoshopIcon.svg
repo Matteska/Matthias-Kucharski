@@ -3,11 +3,11 @@
 <svg version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:#FFFFFF;}
-	.st1{fill:none;stroke:#FFFFFF;stroke-miterlimit:10;}
+	.st0{fill:#FC7C8B;}
+	.st1{fill:none;stroke:#FC7C8B;stroke-width:2;stroke-miterlimit:10;}
 </style>
-<rect x="26.8" y="12.5" transform="matrix(0.7071 0.7071 -0.7071 0.7071 20.776 -21.4026)" class="st0" width="18.8" height="3.7"/>
+<rect x="34.4" y="4.9" transform="matrix(0.7071 -0.7071 0.7071 0.7071 0.4696 29.8162)" class="st0" width="3.7" height="18.8"/>
 <path class="st0" d="M35.9,9l6-6c1.6-1.6,4.1-1.6,5.7,0l0,0c1.6,1.6,1.6,4.1,0,5.7l-6,6L35.9,9z"/>
-<line class="st1" x1="5.5" y1="40.2" x2="10.4" y2="45.1"/>
+<line class="st1" x1="5.5" y1="40.2" x2="9.7" y2="44.4"/>
 <path class="st1" d="M38.8,16.6L12.9,42.4l-7.7,6.1c-0.9,0.7-2.2,0.6-3-0.2l0,0c-0.8-0.8-0.9-2.1-0.2-3l6-7.6l26-26"/>
 </svg>

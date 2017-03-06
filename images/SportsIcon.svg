@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!-- Generator: Adobe Illustrator 21.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:none;stroke:#FFFFFF;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;}
+	.st0{fill:none;stroke:#A1A5D3;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;}
 </style>
 <g>
-	<ellipse transform="matrix(0.7071 -0.7071 0.7071 0.7071 -10.3553 25)" class="st0" cx="25" cy="25" rx="22.6" ry="22.6"/>
-	<path class="st0" d="M47.6,24.5c-5.6-0.1-11.2-2.3-15.5-6.6c-4.3-4.3-6.5-9.9-6.6-15.5"/>
+	<ellipse transform="matrix(0.7071 -0.7071 0.7071 0.7071 -10.3554 24.9998)" class="st0" cx="25" cy="25" rx="22.6" ry="22.6"/>
+	<path class="st0" d="M47.6,24.5c-5.6-0.1-11.2-2.3-15.5-6.6S25.6,8,25.5,2.4"/>
 	<path class="st0" d="M2.4,25.5c5.6,0.1,11.2,2.3,15.4,6.6c4.3,4.3,6.5,9.8,6.6,15.4"/>
 	<line class="st0" x1="9" y1="41" x2="41" y2="9"/>
 	<line class="st0" x1="9" y1="9" x2="41" y2="41"/>
