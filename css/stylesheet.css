@@ -147,7 +147,7 @@ body {
     body .wrapper svg {
       display: flex;
       justify-content: center;
-      height: 50vh;
+      height: 70vh;
       margin: 0 auto; }
       @media only screen and (min-width: 1800px) {
         body .wrapper svg {
@@ -216,16 +216,19 @@ body {
         stroke-miterlimit: 10; }
     body .wrapper .default-container {
       display: flex;
+      flex-direction: column;
       justify-content: space-between;
       align-items: center;
-      padding-top: 80px;
       padding-bottom: 40px;
+      padding-top: 40px;
       color: #fff;
       font-size: 1.125rem; }
-      body .wrapper .default-container.about {
-        align-items: flex-start; }
+      @media only screen and (min-width: 900px) {
+        body .wrapper .default-container {
+          flex-direction: row; } }
       body .wrapper .default-container.hero {
-        padding-top: 40px;
+        flex-direction: column-reverse; }
+      body .wrapper .default-container.about {
         padding-bottom: 80px; }
       body .wrapper .default-container.contact-box {
         justify-content: center;
@@ -242,6 +245,9 @@ body {
           flex-direction: row; } }
       body .wrapper .default-container .box-style {
         padding: 0 20px; }
+        body .wrapper .default-container .box-style h2 {
+          line-height: 140%;
+          margin: 20px 0; }
         @media only screen and (min-width: 900px) {
           body .wrapper .default-container .box-style {
             width: 50%; } }
@@ -249,18 +255,16 @@ body {
           display: flex; }
           @media only screen and (max-width: 599px) {
             body .wrapper .default-container .box-style.right {
-              margin-bottom: 20px; } }
+              margin-bottom: 20px;
+              flex-direction: column; } }
           body .wrapper .default-container .box-style.right img {
-            width: 100%;
+            width: 60%;
             margin: 0 auto;
             align-self: center; }
             @media only screen and (max-width: 599px) {
               body .wrapper .default-container .box-style.right img {
                 width: 100%;
                 height: auto; } }
-        body .wrapper .default-container .box-style.left h2 {
-          line-height: 140%;
-          margin: 20px 0; }
         body .wrapper .default-container .box-style.left p {
           margin-bottom: 20px;
           color: #808080; }
@@ -268,17 +272,14 @@ body {
         width: 80%;
         margin: 0 auto; }
       body .wrapper .default-container .hero-headline {
-        font-size: 30px;
+        font-size: 25px;
         line-height: 140%;
         text-align: left; }
         @media only screen and (max-width: 599px) {
           body .wrapper .default-container .hero-headline {
-            text-align: center;
-            font-size: 35px; } }
-    body .wrapper .skills-section-container {
-      padding: 0 20px; }
-      body .wrapper .skills-section-container h2 {
-        margin: 20px 0; }
+            text-align: center; } }
+    body .wrapper .skills-section-container h2 {
+      margin: 20px 0; }
     body .wrapper .headline {
       margin-top: 20px 0;
       padding: 0 20px; }
@@ -290,15 +291,9 @@ body {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      /*padding: 40px 0px;*/
-      color: #808080;
-      /*&.programming {
-    padding-bottom: 40px;
-  }*/ }
-      body .wrapper .skills-section.software p, body .wrapper .skills-section.programming p {
-        color: #A1A5D3; }
-      body .wrapper .skills-section.freetime p {
-        color: #A1A5D3; }
+      color: #A1A5D3; }
+      body .wrapper .skills-section.software {
+        margin-bottom: 20px; }
       @media only screen and (min-width: 600px) {
         body .wrapper .skills-section {
           flex-direction: row;
@@ -380,7 +375,7 @@ body {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
-      padding: 20px 0; }
+      padding: 20px 20px; }
       body footer .footer-content, body footer .footer-content p, body footer .footer-content a {
         background-color: #1d1d21;
         color: #fff;

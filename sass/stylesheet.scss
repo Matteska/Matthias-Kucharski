@@ -278,7 +278,7 @@ nav {
 
     display: flex;
     justify-content: center;
-    height: 50vh;
+    height: 70vh;
     margin: 0 auto;
 
     @include for-big-desktop-up {
@@ -376,19 +376,23 @@ nav {
 
   .default-container {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items:center;
-    padding-top: 80px;
     padding-bottom: 40px;
+    padding-top: 40px;
     color: $secondary-color;
     font-size: $copy;
 
-    &.about {
-      align-items:flex-start;
+    @include for-tablet-landscape-up {
+      flex-direction: row;
     }
 
     &.hero {
-      padding-top: 40px;
+      flex-direction: column-reverse;
+    }
+
+    &.about {
       padding-bottom: 80px;
     }
 
@@ -417,9 +421,13 @@ nav {
     .box-style {
       padding: 0 20px;
 
+      h2 {
+      line-height: 140%;
+      margin: 20px 0;
+      }
+
       @include for-tablet-landscape-up {
         width: 50%;
-
       }
 
       &.right {
@@ -427,10 +435,11 @@ nav {
 
         @include for-phone-only {
           margin-bottom: 20px;
+          flex-direction: column;
         }
 
         img {
-          width: 100%;
+          width: 60%;
           margin: 0 auto;
           align-self: center;
           @include for-phone-only {
@@ -441,10 +450,6 @@ nav {
       }
 
       &.left {
-        h2 {
-          line-height: 140%;
-          margin: 20px 0;
-        }
 
         p {
           margin-bottom: 20px;
@@ -459,13 +464,12 @@ nav {
     }
 
     .hero-headline {
-      font-size: 30px;
+      font-size: 25px;
       line-height: 140%;
       text-align: left;
 
       @include for-phone-only {
         text-align: center;
-        font-size: 35px;
       }
     }
 
@@ -474,7 +478,6 @@ nav {
   }
 
   .skills-section-container {
-    padding: 0 20px;
 
     h2 {
       margin: 20px 0;
@@ -498,31 +501,16 @@ nav {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /*padding: 40px 0px;*/
-    color: $accent-color;
+    color: $lilac;
 
-
-    &.software, &.programming {
-      p {
-        color: $lilac;
-      }
-    }
-
-    &.freetime {
-      p {
-        color: $lilac;
-      }
+    &.software {
+      margin-bottom: 20px;
     }
 
     @include for-tablet-portrait-up {
       flex-direction: row;
       justify-content: space-between;
     }
-
-    /*&.programming {
-    padding-bottom: 40px;
-  }*/
-
 
   .skill-box {
     padding-bottom: 80px;
@@ -650,11 +638,12 @@ footer {
   background-color: #1d1d21;
   font-size: $micro-copy;
 
+
   .footer-content {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 20px 0;
+    padding: 20px 20px;
 
     &, p, a {
       background-color: #1d1d21;
