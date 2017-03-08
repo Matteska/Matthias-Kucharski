@@ -73,8 +73,8 @@ body {
 
 
   header {
-    margin-left: 0;
-    margin-right: 0;
+    margin-left: 20px;
+    margin-right: 20px;
     display: flex;
     padding: 20px 0;
     flex-direction: row;
@@ -113,7 +113,7 @@ body {
     }
 
     @include for-big-desktop-up {
-      max-width: 1770px;
+      max-width: 1300px;
       width: 100%;
       margin: 0 auto;
     }
@@ -264,8 +264,8 @@ body {
   }
 
   .wrapper {
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
 
 
     @include for-tablet-portrait-up {
@@ -299,7 +299,7 @@ body {
     }
 
     @include for-big-desktop-up {
-      max-width: 1770px;
+      max-width: 1300px;
       width: 100%;
       margin: 0 auto;
     }
@@ -474,17 +474,41 @@ body {
 
           @include for-tablet-portrait-up {
             margin-bottom: 20px;
-            flex-direction: row;
-
+            flex-direction: column;
           }
 
           img {
             width: 60%;
             margin: 0 auto;
             align-self: center;
+
             @include for-phone-only {
-              width: 100%;
+              width: 60%;
               height: auto;
+            }
+          }
+
+          ul {
+            padding-top: 20px;
+            flex-direction: column;
+
+            @include for-phone-only {
+              margin: 0 auto;
+            }
+
+            @include for-tablet-portrait-up {
+              flex-direction: row;
+            }
+
+            li {
+              justify-content: center;
+              &:first-child {
+                margin-right: 20px;
+
+                @include for-phone-only {
+                  margin-bottom: 20px;
+                }
+              }
             }
           }
         }
@@ -494,6 +518,10 @@ body {
           p {
             margin-bottom: 20px;
             color: $accent-color;
+          }
+
+          &.introduction {
+            margin-bottom: 40px;
           }
         }
       }
@@ -522,6 +550,9 @@ body {
       h2 {
         margin: 20px 0;
 
+        @include for-phone-only {
+          text-align: center;
+        }
       }
     }
 
@@ -607,6 +638,17 @@ body {
         color: $accent-color;
         border-color: $accent-color;
         transition: all ease 420ms;
+      }
+
+      &.intro {
+        border: 1px solid $rose;
+        color: $rose;
+
+        &:hover {
+          color: $accent-color;
+          border-color: $accent-color;
+          transition: all ease 420ms;
+        }
       }
     }
 
@@ -717,7 +759,7 @@ body {
       }
 
       @include for-big-desktop-up {
-        max-width: 1770px;
+        max-width: 1300px;
         width: 100%;
         margin: 0 auto;
       }
