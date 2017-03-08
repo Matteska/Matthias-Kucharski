@@ -269,9 +269,9 @@ body {
           color: #fff; }
       body .wrapper .default-container.endline {
         border-bottom: 1px solid #808080; }
-      @media only screen and (min-width: 900px) {
-        body .wrapper .default-container {
-          flex-direction: row; } }
+      body .wrapper .default-container .heading {
+        width: 100%;
+        text-align: left; }
       body .wrapper .default-container .box-style {
         padding: 0 20px; }
         body .wrapper .default-container .box-style h2 {
@@ -384,8 +384,8 @@ body {
         border-color: #808080;
         transition: all ease 420ms; }
       body .wrapper a.button.intro {
-        border: 1px solid #fc7c8b;
-        color: #fc7c8b; }
+        border: 1px solid #A1A5D3;
+        color: #A1A5D3; }
         body .wrapper a.button.intro:hover {
           color: #808080;
           border-color: #808080;

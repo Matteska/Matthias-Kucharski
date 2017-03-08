@@ -427,10 +427,7 @@ body {
 
       &.about {
         padding-bottom: 80px;
-
-
         align-items: flex-start;
-
       }
 
       &.contact-box {
@@ -451,12 +448,15 @@ body {
         border-bottom: 1px solid $accent-color;
       }
 
-      @include for-tablet-landscape-up {
-        flex-direction: row;
+      .heading {
+        width: 100%;
+        text-align: left;
       }
+
 
       .box-style {
         padding: 0 20px;
+      
 
         h2 {
           line-height: 140%;
@@ -471,6 +471,8 @@ body {
           display: flex;
           margin: 0 auto;
           flex-direction: column;
+
+
 
           @include for-tablet-portrait-up {
             margin-bottom: 20px;
@@ -641,8 +643,9 @@ body {
       }
 
       &.intro {
-        border: 1px solid $rose;
-        color: $rose;
+        border: 1px solid $lilac;
+        color: $lilac;
+
 
         &:hover {
           color: $accent-color;
