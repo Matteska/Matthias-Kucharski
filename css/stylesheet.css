@@ -117,11 +117,14 @@ body {
         display: flex;
         opacity: 1;
         visibility: visible; }
-      body header nav ul.navigation-items li:first-child {
-        padding-right: 20px; }
+      @media only screen and (max-width: 599px) {
+        body header nav ul.navigation-items li {
+          padding: 20px; } }
       @media only screen and (min-width: 1200px) {
         body header nav ul.navigation-items li {
-          display: inline-block; } }
+          display: inline-block; }
+          body header nav ul.navigation-items li:first-child {
+            padding-right: 20px; } }
       body header nav ul.navigation-items a {
         /*padding: 14px 20px;*/
         display: block;
@@ -358,6 +361,9 @@ body {
           padding-left: 0; }
         body .wrapper .skills-section .skill-box.html5 {
           padding-left: 0; }
+        @media only screen and (min-width: 600px) {
+          body .wrapper .skills-section .skill-box {
+            padding-bottom: 50px; } }
         @media only screen and (min-width: 1200px) {
           body .wrapper .skills-section .skill-box {
             width: 25%;

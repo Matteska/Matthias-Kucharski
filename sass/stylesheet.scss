@@ -224,512 +224,51 @@ body {
 
 
         li {
-
-          &:first-child {
-            padding-right: 20px;
+          @include for-phone-only {
+            padding: 20px;
           }
 
-          @include for-desktop-up {
-            display: inline-block;
-          }
-        }
-
-        a {
-          /*padding: 14px 20px;*/
-          display: block;
-          text-align: center;
-          text-decoration: none;
-          color: $secondary-color;
-          font-size: $mobile-nav;
-
-          &:hover {
-            color: $accent-color;
-            transition: all ease 420ms;
-          }
-
-          @include for-desktop-up {
-            font-size: $copy;
-
-            &.current:link, &.current:visited, &.current:hover  {
-              color: $accent-color;
+            @include for-desktop-up {
+              display: inline-block;
+              &:first-child {
+                padding-right: 20px;
+              }
             }
+          }
+
+          a {
+            /*padding: 14px 20px;*/
+            display: block;
+            text-align: center;
+            text-decoration: none;
+            color: $secondary-color;
+            font-size: $mobile-nav;
 
             &:hover {
               color: $accent-color;
-            }
-          }
-        }
-      }
-    }
-  }
-
-  .wrapper {
-    margin-left: 20px;
-    margin-right: 20px;
-
-
-    @include for-tablet-portrait-up {
-      max-width: 570px;
-      width: 100%;
-      margin: 0 auto;
-    }
-
-    @include for-ipad-up {
-      max-width: 738px;
-      width: 100%;
-      margin: 0 auto;
-    }
-
-    @include for-tablet-landscape-up {
-      max-width: 870px;
-      width: 100%;
-      margin: 0 auto;
-    }
-
-    @include for-ipad-pro-landscape {
-      max-width: 994px;
-      width: 100%;
-      margin: 0 auto;
-    }
-
-    @include for-desktop-up {
-      max-width: 1170px;
-      width: 100%;
-      margin: 0 auto;
-    }
-
-    @include for-big-desktop-up {
-      max-width: 1300px;
-      width: 100%;
-      margin: 0 auto;
-    }
-
-
-
-    //Index Illustration//
-    svg {
-
-      display: flex;
-      justify-content: center;
-      height: 70vh;
-      margin: 0 auto;
-
-      @include for-big-desktop-up {
-        height: 50vh;
-      }
-
-      .st0 {
-        fill:none;
-        stroke:#4D4D4D;
-        stroke-width:3;
-        stroke-miterlimit:10;
-      }
-
-      .st1 {
-        fill:#4D4D4D;
-      }
-
-      .st2 {
-        fill:none;
-        stroke:#4D4D4D;
-        stroke-width:3;
-        stroke-linecap:round;
-        stroke-miterlimit:10;
-      }
-
-      .st3 {
-        fill:none;
-        stroke:#999999;
-        stroke-width:2;
-        stroke-linecap:round;
-        stroke-linejoin:round;
-        stroke-miterlimit:10;
-      }
-
-      .st4 {
-        fill:none;
-        stroke:#FC7C8B;
-        stroke-width:3;
-        stroke-linecap:round;
-        stroke-linejoin:round;
-        stroke-miterlimit:10;
-        stroke-dasharray:0,18,25,12,35,0;
-      }
-
-      .st5 {
-        fill:none;
-        stroke:#A1A5D3;
-        stroke-width:2;
-        stroke-linecap:round;
-        stroke-linejoin:round;
-        stroke-miterlimit:10;
-      }
-
-      .st6 {
-        fill:#FF3948;
-      }
-
-      .st7 {
-        fill:#22B573;
-      }
-
-      .st8 {
-        fill:none;
-        stroke:#FC7C8B;
-        stroke-width:2;
-        stroke-linecap:round;
-        stroke-linejoin:round;
-        stroke-miterlimit:10;
-      }
-
-      .st9 {
-        fill:none;
-        stroke:#A1A5D3;
-        stroke-width:2;
-        stroke-miterlimit:10;
-      }
-
-      .st10 {
-        fill:#A1A5D3;
-      }
-
-      .st11 {
-        fill:#FC7C8B;
-      }
-      .st12 {
-        fill:none;
-        stroke:#A1A5D3;
-        stroke-width:3;
-        stroke-linecap:round;
-        stroke-linejoin:round;
-        stroke-miterlimit:10;
-      }
-    }
-
-
-    .default-container {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      align-items:center;
-      padding-bottom: 40px;
-      padding-top: 40px;
-      color: $secondary-color;
-      font-size: $copy;
-
-      @include for-tablet-landscape-up {
-        flex-direction: row;
-      }
-
-      &.hero {
-        flex-direction: column-reverse;
-      }
-
-      &.about {
-        padding-bottom: 80px;
-        align-items: flex-start;
-      }
-
-      &.contact-box {
-        justify-content: center;
-        flex-direction: column;
-
-        h2 {
-          padding-bottom: 20px;
-        }
-
-        .contact-headline {
-          font-size: 45px;
-          color: $secondary-color;
-        }
-      }
-
-      &.endline {
-        border-bottom: 1px solid $accent-color;
-      }
-
-      .heading {
-        width: 100%;
-        text-align: left;
-      }
-
-
-      .box-style {
-        padding: 0 20px;
-      
-
-        h2 {
-          line-height: 140%;
-          margin: 20px 0;
-        }
-
-        @include for-tablet-landscape-up {
-          width: 50%;
-        }
-
-        &.right {
-          display: flex;
-          margin: 0 auto;
-          flex-direction: column;
-
-
-
-          @include for-tablet-portrait-up {
-            margin-bottom: 20px;
-            flex-direction: column;
-          }
-
-          img {
-            width: 60%;
-            margin: 0 auto;
-            align-self: center;
-
-            @include for-phone-only {
-              width: 60%;
-              height: auto;
-            }
-          }
-
-          ul {
-            padding-top: 20px;
-            flex-direction: column;
-
-            @include for-phone-only {
-              margin: 0 auto;
+              transition: all ease 420ms;
             }
 
-            @include for-tablet-portrait-up {
-              flex-direction: row;
-            }
+            @include for-desktop-up {
+              font-size: $copy;
 
-            li {
-              justify-content: center;
-              &:first-child {
-                margin-right: 20px;
+              &.current:link, &.current:visited, &.current:hover  {
+                color: $accent-color;
+              }
 
-                @include for-phone-only {
-                  margin-bottom: 20px;
-                }
+              &:hover {
+                color: $accent-color;
               }
             }
           }
         }
-
-        &.left {
-
-          p {
-            margin-bottom: 20px;
-            color: $accent-color;
-          }
-
-          &.introduction {
-            margin-bottom: 40px;
-          }
-        }
-      }
-
-      .box-style-full-width {
-        width: 80%;
-        margin: 0 auto;
-      }
-
-      .hero-headline {
-        font-size: 25px;
-        line-height: 140%;
-        text-align: left;
-
-        @include for-phone-only {
-          text-align: center;
-        }
-      }
-
-
-
-    }
-
-    .skills-section-container {
-
-      h2 {
-        margin: 20px 0;
-
-        @include for-phone-only {
-          text-align: center;
-        }
       }
     }
 
-    .headline {
-      margin-top: 20px 0;
-      //margin-bottom: 20px;
-      padding: 0 20px;
-
-      @include for-desktop-up {
-        flex-direction: row;
-        justify-content: space-between;
-      }
-
-    }
-
-    .skills-section {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      color: $lilac;
-
-      &.software {
-        margin-bottom: 20px;
-      }
-
-      @include for-tablet-portrait-up {
-        flex-direction: row;
-        justify-content: space-between;
-      }
-
-      .skill-box {
-        padding-bottom: 80px;
-        justify-content: center;
-        text-align: center;
-
-        &.illustrator {
-          padding-left: 0;
-        }
-
-        &.html5 {
-          padding-left: 0;
-        }
-
-
-
-        @include for-desktop-up {
-          width: 25%;
-          padding: 0 20px;
-        }
-
-
-
-        img {
-          width: 80px;
-          padding-bottom: 10px;
-
-          @include for-tablet-portrait-up {
-            width: 50px;
-          }
-        }
-      }
-    }
-
-
-
-    .contact-box {
-      a {
-        padding: 30px;
-        margin-left: 10px;
-      }
-    }
-
-    a.button {
-      border: 1px solid $secondary-color;
-      color: $secondary-color;
-      text-align: center;
-      display: inline-block;
-      padding: 10px;
-      border-radius:3px;
-      text-decoration: none;
-
-      &:hover {
-        color: $accent-color;
-        border-color: $accent-color;
-        transition: all ease 420ms;
-      }
-
-      &.intro {
-        border: 1px solid $lilac;
-        color: $lilac;
-
-
-        &:hover {
-          color: $accent-color;
-          border-color: $accent-color;
-          transition: all ease 420ms;
-        }
-      }
-    }
-
-    ul {
-      list-style: none;
-      display: flex;
-      position: relative;
-      flex-direction: row;
-      list-style-type: none;
-
-      li {
-        text-decoration: none;
-        list-style: none;
-      }
-
-      li:hover {
-        .icon-style {
-          fill: $accent-color;
-        }
-      }
-
-      a {
-        align-self: flex-end;
-        text-decoration: none;
-        display: block;
-        &:hover {
-          color: $accent-color;
-          transition: all ease 420ms;
-        }
-      }
-
-      .icon-style {
-        fill: $secondary-color;
-      }
-
-      svg {
-        fill: #fff;
-        height: 20px;
-        width: auto;
-        padding-left: 10px;
-      }
-    }
-
-    .impressum {
-      width: 80%;
-      padding: 40px 0;
-
-      h1 {
-        margin-bottom: 40px;
-      }
-
-      h2 {
-        color: $secondary-color;
-        font-size: $copy;
-      }
-
-      p {
-        color: $accent-color;
-      }
-
-      a {
-        color: $accent-color;
-      }
-    }
-  }
-
-
-  footer {
-    background-color: #1d1d21;
-    font-size: $micro-copy;
-
-    .footer-content {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      padding: 15px 0;
-      margin-right: 20px;
+    .wrapper {
       margin-left: 20px;
+      margin-right: 20px;
+
 
       @include for-tablet-portrait-up {
         max-width: 570px;
@@ -767,11 +306,356 @@ body {
         margin: 0 auto;
       }
 
-      .contact {
-        background-color: $accent-color-2;
 
+
+      //Index Illustration//
+      svg {
+
+        display: flex;
+        justify-content: center;
+        height: 70vh;
+        margin: 0 auto;
+
+        @include for-big-desktop-up {
+          height: 50vh;
+        }
+
+        .st0 {
+          fill:none;
+          stroke:#4D4D4D;
+          stroke-width:3;
+          stroke-miterlimit:10;
+        }
+
+        .st1 {
+          fill:#4D4D4D;
+        }
+
+        .st2 {
+          fill:none;
+          stroke:#4D4D4D;
+          stroke-width:3;
+          stroke-linecap:round;
+          stroke-miterlimit:10;
+        }
+
+        .st3 {
+          fill:none;
+          stroke:#999999;
+          stroke-width:2;
+          stroke-linecap:round;
+          stroke-linejoin:round;
+          stroke-miterlimit:10;
+        }
+
+        .st4 {
+          fill:none;
+          stroke:#FC7C8B;
+          stroke-width:3;
+          stroke-linecap:round;
+          stroke-linejoin:round;
+          stroke-miterlimit:10;
+          stroke-dasharray:0,18,25,12,35,0;
+        }
+
+        .st5 {
+          fill:none;
+          stroke:#A1A5D3;
+          stroke-width:2;
+          stroke-linecap:round;
+          stroke-linejoin:round;
+          stroke-miterlimit:10;
+        }
+
+        .st6 {
+          fill:#FF3948;
+        }
+
+        .st7 {
+          fill:#22B573;
+        }
+
+        .st8 {
+          fill:none;
+          stroke:#FC7C8B;
+          stroke-width:2;
+          stroke-linecap:round;
+          stroke-linejoin:round;
+          stroke-miterlimit:10;
+        }
+
+        .st9 {
+          fill:none;
+          stroke:#A1A5D3;
+          stroke-width:2;
+          stroke-miterlimit:10;
+        }
+
+        .st10 {
+          fill:#A1A5D3;
+        }
+
+        .st11 {
+          fill:#FC7C8B;
+        }
+        .st12 {
+          fill:none;
+          stroke:#A1A5D3;
+          stroke-width:3;
+          stroke-linecap:round;
+          stroke-linejoin:round;
+          stroke-miterlimit:10;
+        }
+      }
+
+
+      .default-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items:center;
+        padding-bottom: 40px;
+        padding-top: 40px;
+        color: $secondary-color;
+        font-size: $copy;
+
+        @include for-tablet-landscape-up {
+          flex-direction: row;
+        }
+
+        &.hero {
+          flex-direction: column-reverse;
+        }
+
+        &.about {
+          padding-bottom: 80px;
+          align-items: flex-start;
+        }
+
+        &.contact-box {
+          justify-content: center;
+          flex-direction: column;
+
+          h2 {
+            padding-bottom: 20px;
+          }
+
+          .contact-headline {
+            font-size: 45px;
+            color: $secondary-color;
+          }
+        }
+
+        &.endline {
+          border-bottom: 1px solid $accent-color;
+        }
+
+        .heading {
+          width: 100%;
+          text-align: left;
+        }
+
+
+        .box-style {
+          padding: 0 20px;
+
+
+          h2 {
+            line-height: 140%;
+            margin: 20px 0;
+          }
+
+          @include for-tablet-landscape-up {
+            width: 50%;
+          }
+
+          &.right {
+            display: flex;
+            margin: 0 auto;
+            flex-direction: column;
+
+
+
+            @include for-tablet-portrait-up {
+              margin-bottom: 20px;
+              flex-direction: column;
+            }
+
+            img {
+              width: 60%;
+              margin: 0 auto;
+              align-self: center;
+
+              @include for-phone-only {
+                width: 60%;
+                height: auto;
+              }
+            }
+
+            ul {
+              padding-top: 20px;
+              flex-direction: column;
+
+              @include for-phone-only {
+                margin: 0 auto;
+              }
+
+              @include for-tablet-portrait-up {
+                flex-direction: row;
+              }
+
+              li {
+                justify-content: center;
+                &:first-child {
+                  margin-right: 20px;
+
+                  @include for-phone-only {
+                    margin-bottom: 20px;
+                  }
+                }
+              }
+            }
+          }
+
+          &.left {
+
+            p {
+              margin-bottom: 20px;
+              color: $accent-color;
+            }
+
+            &.introduction {
+              margin-bottom: 40px;
+            }
+          }
+        }
+
+        .box-style-full-width {
+          width: 80%;
+          margin: 0 auto;
+        }
+
+        .hero-headline {
+          font-size: 25px;
+          line-height: 140%;
+          text-align: left;
+
+          @include for-phone-only {
+            text-align: center;
+          }
+        }
+
+
+
+      }
+
+      .skills-section-container {
+
+        h2 {
+          margin: 20px 0;
+
+          @include for-phone-only {
+            text-align: center;
+          }
+        }
+      }
+
+      .headline {
+        margin-top: 20px 0;
+        //margin-bottom: 20px;
+        padding: 0 20px;
+
+        @include for-desktop-up {
+          flex-direction: row;
+          justify-content: space-between;
+        }
+
+      }
+
+      .skills-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        color: $lilac;
+
+        &.software {
+          margin-bottom: 20px;
+        }
+
+        @include for-tablet-portrait-up {
+          flex-direction: row;
+          justify-content: space-between;
+        }
+
+        .skill-box {
+          padding-bottom: 80px;
+          justify-content: center;
+          text-align: center;
+
+          &.illustrator {
+            padding-left: 0;
+          }
+
+          &.html5 {
+            padding-left: 0;
+          }
+
+          @include for-tablet-portrait-up {
+            padding-bottom: 50px;
+          }
+
+          @include for-desktop-up {
+            width: 25%;
+            padding: 0 20px;
+          }
+
+
+
+          img {
+            width: 80px;
+            padding-bottom: 10px;
+
+            @include for-tablet-portrait-up {
+              width: 50px;
+            }
+          }
+        }
+      }
+
+
+
+      .contact-box {
         a {
-          padding-left: 20px;
+          padding: 30px;
+          margin-left: 10px;
+        }
+      }
+
+      a.button {
+        border: 1px solid $secondary-color;
+        color: $secondary-color;
+        text-align: center;
+        display: inline-block;
+        padding: 10px;
+        border-radius:3px;
+        text-decoration: none;
+
+        &:hover {
+          color: $accent-color;
+          border-color: $accent-color;
+          transition: all ease 420ms;
+        }
+
+        &.intro {
+          border: 1px solid $lilac;
+          color: $lilac;
+
+
+          &:hover {
+            color: $accent-color;
+            border-color: $accent-color;
+            transition: all ease 420ms;
+          }
         }
       }
 
@@ -782,11 +666,9 @@ body {
         flex-direction: row;
         list-style-type: none;
 
-
         li {
           text-decoration: none;
           list-style: none;
-          background-color: $accent-color-2;
         }
 
         li:hover {
@@ -799,8 +681,6 @@ body {
           align-self: flex-end;
           text-decoration: none;
           display: block;
-          background-color: $accent-color-2;
-
           &:hover {
             color: $accent-color;
             transition: all ease 420ms;
@@ -813,23 +693,147 @@ body {
 
         svg {
           fill: #fff;
-          height: 18px;
+          height: 20px;
           width: auto;
           padding-left: 10px;
-          background-color: $accent-color-2;
         }
       }
 
-      &, p, a {
-        background-color: #1d1d21;
-        color: $secondary-color;
-        text-decoration: none;
-      }
+      .impressum {
+        width: 80%;
+        padding: 40px 0;
 
-      a:hover {
-        color: $accent-color;
-        transition: all ease 240ms;
+        h1 {
+          margin-bottom: 40px;
+        }
+
+        h2 {
+          color: $secondary-color;
+          font-size: $copy;
+        }
+
+        p {
+          color: $accent-color;
+        }
+
+        a {
+          color: $accent-color;
+        }
+      }
+    }
+
+
+    footer {
+      background-color: #1d1d21;
+      font-size: $micro-copy;
+
+      .footer-content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 15px 0;
+        margin-right: 20px;
+        margin-left: 20px;
+
+        @include for-tablet-portrait-up {
+          max-width: 570px;
+          width: 100%;
+          margin: 0 auto;
+        }
+
+        @include for-ipad-up {
+          max-width: 738px;
+          width: 100%;
+          margin: 0 auto;
+        }
+
+        @include for-tablet-landscape-up {
+          max-width: 870px;
+          width: 100%;
+          margin: 0 auto;
+        }
+
+        @include for-ipad-pro-landscape {
+          max-width: 994px;
+          width: 100%;
+          margin: 0 auto;
+        }
+
+        @include for-desktop-up {
+          max-width: 1170px;
+          width: 100%;
+          margin: 0 auto;
+        }
+
+        @include for-big-desktop-up {
+          max-width: 1300px;
+          width: 100%;
+          margin: 0 auto;
+        }
+
+        .contact {
+          background-color: $accent-color-2;
+
+          a {
+            padding-left: 20px;
+          }
+        }
+
+        ul {
+          list-style: none;
+          display: flex;
+          position: relative;
+          flex-direction: row;
+          list-style-type: none;
+
+
+          li {
+            text-decoration: none;
+            list-style: none;
+            background-color: $accent-color-2;
+          }
+
+          li:hover {
+            .icon-style {
+              fill: $accent-color;
+            }
+          }
+
+          a {
+            align-self: flex-end;
+            text-decoration: none;
+            display: block;
+            background-color: $accent-color-2;
+
+            &:hover {
+              color: $accent-color;
+              transition: all ease 420ms;
+            }
+          }
+
+          .icon-style {
+            fill: $secondary-color;
+          }
+
+          svg {
+            fill: #fff;
+            height: 18px;
+            width: auto;
+            padding-left: 10px;
+            background-color: $accent-color-2;
+          }
+        }
+
+        &, p, a {
+          background-color: #1d1d21;
+          color: $secondary-color;
+          text-decoration: none;
+        }
+
+        a:hover {
+          color: $accent-color;
+          transition: all ease 240ms;
+        }
       }
     }
   }
-}
