@@ -97,7 +97,6 @@ body {
       display: flex;
       transition: all ease 420ms;
       position: absolute;
-      visibility: visible;
       flex-direction: column;
       justify-content: center;
       top: 0;
@@ -257,19 +256,19 @@ body {
       @media only screen and (min-width: 900px) {
         body .wrapper .default-container {
           flex-direction: row; } }
+      body .wrapper .default-container.portfolio {
+        padding-bottom: 80px; }
+        @media only screen and (min-width: 900px) {
+          body .wrapper .default-container.portfolio {
+            justify-content: center;
+            text-align: center; } }
+      body .wrapper .default-container.screen {
+        padding-top: 80px; }
       body .wrapper .default-container.hero {
         flex-direction: column-reverse; }
       body .wrapper .default-container.about {
         padding-bottom: 80px;
         align-items: flex-start; }
-      body .wrapper .default-container.contact-box {
-        justify-content: center;
-        flex-direction: column; }
-        body .wrapper .default-container.contact-box h2 {
-          padding-bottom: 20px; }
-        body .wrapper .default-container.contact-box .contact-headline {
-          font-size: 45px;
-          color: #fff; }
       body .wrapper .default-container.endline {
         border-bottom: 1px solid #808080; }
       body .wrapper .default-container .heading {
@@ -374,9 +373,6 @@ body {
           @media only screen and (min-width: 600px) {
             body .wrapper .skills-section .skill-box img {
               width: 50px; } }
-    body .wrapper .contact-box a {
-      padding: 30px;
-      margin-left: 10px; }
     body .wrapper a.button {
       border: 1px solid #fff;
       color: #fff;

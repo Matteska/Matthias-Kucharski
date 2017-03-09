@@ -197,7 +197,6 @@ body {
         display: flex;
         transition: all ease 420ms;
         position: absolute;
-        visibility: visible;
         flex-direction: column;
         justify-content: center;
 
@@ -423,6 +422,18 @@ body {
           flex-direction: row;
         }
 
+        &.portfolio {
+          padding-bottom: 80px;
+          @include for-tablet-landscape-up {
+          justify-content: center;
+          text-align: center;
+          }
+        }
+
+        &.screen {
+          padding-top: 80px;
+        }
+
         &.hero {
           flex-direction: column-reverse;
         }
@@ -430,20 +441,6 @@ body {
         &.about {
           padding-bottom: 80px;
           align-items: flex-start;
-        }
-
-        &.contact-box {
-          justify-content: center;
-          flex-direction: column;
-
-          h2 {
-            padding-bottom: 20px;
-          }
-
-          .contact-headline {
-            font-size: 45px;
-            color: $secondary-color;
-          }
         }
 
         &.endline {
@@ -619,15 +616,6 @@ body {
               width: 50px;
             }
           }
-        }
-      }
-
-
-
-      .contact-box {
-        a {
-          padding: 30px;
-          margin-left: 10px;
         }
       }
 
