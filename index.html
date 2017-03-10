@@ -10,6 +10,12 @@
   <meta property="og:site_name" content="Matthias Kucharski">
   <meta property="og:description" content="UX/Frontend Designer and Illustration Lover from Germany">
   <meta property="og:image" content="">
+  <link rel="apple-touch-icon" sizes="180x180" href="../images/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="../images/favicons/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="../images/favicons/favicon-16x16.png" sizes="16x16">
+  <link rel="manifest" href="../images/favicons/manifest.json">
+  <link rel="mask-icon" href="../images/favicons/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="theme-color" content="#ffffff">
   <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
 </head>
@@ -158,13 +164,13 @@
       </div>
       <div class="box-style right introduction">
         <p class="hero-headline">
-        Hi, Ich bin Matthias, wohne in Köln und bin angehender Mediengestalter Digital und Print.
-        Besonders zuhause fühle ich mich im UX/UI Design und Web Design.
-      </p>
-      <ul>
-        <li><a class="button intro" href="mailto:matthias.kucharski@gmail.com" title="Kontakt aufnehmen"> Kontakt aufnehmen</a></li>
-      <li><a class="button intro" href="subpages/arbeiten.html" title="Arbeiten anschauen">Arbeiten anschauen</a></li>
-    </ul>
+          Hi, Ich bin Matthias, wohne in Köln und bin angehender Mediengestalter Digital und Print.
+          Besonders zuhause fühle ich mich im UX/UI Design und Web Design.
+        </p>
+        <ul>
+          <li><a class="button intro" href="mailto:matthias.kucharski@gmail.com" title="Kontakt aufnehmen"> Kontakt aufnehmen</a></li>
+          <li><a class="button intro" href="subpages/arbeiten.html" title="Arbeiten anschauen">Arbeiten anschauen</a></li>
+        </ul>
       </div>
     </div>
 
@@ -220,29 +226,29 @@
           </div>
         </div>
       </div>
+    </div>
+  </div>
+  <footer>
+    <div class="footer-content">
+      <a href="subpages/impressum.html">Impressum</a>
+      <div class="contact">
+        <a href="http://www.dribbble.com/matthiaskucharski" target="_blank" title="Matthias Kucharski auf dribbble">dribbble</a>
+        <a href="http://www.behance.net/mkucharski" target="_blank" title="Matthias Kucharski auf behance">behance</a>
+        <a href="http://www.xing.com/matthiaskucharski" target="_blank" title="Matthias Kucharski auf xing">xing</a>
       </div>
     </div>
-    <footer>
-      <div class="footer-content">
-        <a href="subpages/impressum.html">Impressum</a>
-        <div class="contact">
-          <a href="http://www.dribbble.com/matthiaskucharski" target="_blank" title="Matthias Kucharski auf dribbble">dribbble</a>
-          <a href="http://www.behance.net/mkucharski" target="_blank" title="Matthias Kucharski auf behance">behance</a>
-          <a href="http://www.xing.com/matthiaskucharski" target="_blank" title="Matthias Kucharski auf xing">xing</a>
-        </div>
-      </div>
-    </footer>
+  </footer>
 
-    <script>
-    document.getElementsByClassName("hamburger")[0].addEventListener("click", function(){
-      this.classList.toggle("close");
-      document.getElementsByClassName("navigation-items")[0].classList.toggle("hamburger-overlay");
-    });
-    window.addEventListener('resize', function(){
-      document.getElementsByClassName("navigation-items")[0].classList.remove("hamburger-overlay");
-      document.getElementsByClassName("hamburger")[0].classList.remove("close");
-    });
-    </script>
+  <script>
+  document.getElementsByClassName("hamburger")[0].addEventListener("click", function(){
+    this.classList.toggle("close");
+    document.getElementsByClassName("navigation-items")[0].classList.toggle("hamburger-overlay");
+  });
+  window.addEventListener('resize', function(){
+    document.getElementsByClassName("navigation-items")[0].classList.remove("hamburger-overlay");
+    document.getElementsByClassName("hamburger")[0].classList.remove("close");
+  });
+  </script>
 
-  </body>
-  </html>
+</body>
+</html>
