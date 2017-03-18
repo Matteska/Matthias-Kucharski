@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <title>Matthias Kucharski - Arbeiten</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,shrink-to-fit=no">
+  <meta name="description" content="UX/Frontend Designer and Illustration Lover from Germany">
+  <meta name="keywords" content="Matthias,Kucharski,UX,Design,Frontend,Illustration,Köln,Germany">
+  <meta property="og:title" content="Matthias Kucharski">
+  <meta property="og:site_name" content="Matthias Kucharski">
+  <meta property="og:description" content="UX/Frontend Designer and Illustration Lover from Germany">
+  <meta property="og:image" content="">
+  <link rel="apple-touch-icon" sizes="180x180" href="../images/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="../images/favicons/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="../images/favicons/favicon-16x16.png" sizes="16x16">
+  <link rel="manifest" href="../images/favicons/manifest.json">
+  <link rel="mask-icon" href="../images/favicons/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="theme-color" content="#ffffff">
+  <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="../css/stylesheet.css">
+</head>
+<body>
+  <header>
+    <a href="../index.html" class="logo">
+      <h1 id="name">Matthias Kucharski</h1>
+    </a>
+    <nav>
+      <ul class="navigation-items">
+        <li><a href="../index.html" title="Informationen über Matthias Kucharski">Über mich</a></li>
+        <li><a href="../subpages/arbeiten.html" title="Arbeiten von Matthias Kucharski">Arbeiten</a></li>
+
+      </ul>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+  </header>
+  <div class="wrapper">
+    <div class="default-container">
+      <div class="box-style left introduction">
+        <img class="box-style-full-width" src="../images/pflanzen.jpg" alt="Vorschaubild der Illustration Unterseite">
+      </div>
+      <div class="box-style right introduction">
+        <img class="box-style-full-width" src="../images/morgen.jpg" alt="Vorschaubild der Illustration Unterseite">
+
+
+      </div>
+    </div>
+    </div>
+  </div>
+  <footer>
+    <div class="footer-content">
+      <a href="../subpages/impressum.html">Impressum</a>
+      <div class="contact">
+        <a href="http://www.dribbble.com/matthiaskucharski" target="_blank" title="Matthias Kucharski auf dribbble">dribbble</a>
+        <a href="http://www.behance.net/mkucharski" target="_blank" title="Matthias Kucharski auf behance">behance</a>
+        <a href="http://www.xing.com/matthiaskucharski" target="_blank" title="Matthias Kucharski auf xing">xing</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+  document.getElementsByClassName("hamburger")[0].addEventListener("click", function(){
+    this.classList.toggle("close");
+    document.getElementsByClassName("navigation-items")[0].classList.toggle("hamburger-overlay");
+  });
+  window.addEventListener('resize', function(){
+    document.getElementsByClassName("navigation-items")[0].classList.remove("hamburger-overlay");
+    document.getElementsByClassName("hamburger")[0].classList.remove("close");
+  });
+  </script>
+
+</body>
+</html>
